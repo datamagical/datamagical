@@ -3,112 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Analyst Portfolio - Your Name</title>
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+    <title>My GitHub Portfolio</title>
     <style>
-        body {
+        body, html {
+            height: 100%;
             margin: 0;
             padding: 0;
-            font-family: 'EB Garamond', sans-serif;
-            color: #333;
-            line-height: 1.6;
-            background-color: #fafafa;
-            padding-top: 60px; /* Добавляем отступ в верхней части страницы */
+            font-family: Arial, sans-serif;
+            background-image: url('https://github.com/datamagical/portfolio/blob/main/Certificates/neww.jpg?raw=true');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
         }
-        .buttons-container {
-            display: flex; /* Используем Flexbox */
-            justify-content: center; /* Центрируем кнопки горизонтально */
-            align-items: center; /* Центрируем кнопки вертикально */
-            position: fixed;
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px; /* Adjust height as needed */
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+            position: relative;
             top: 0;
-            left: 0;
             width: 100%;
-            height: 100px; /* Задаем фиксированную высоту контейнера */
-            padding: 10px 0;
-            ## background: rgba(230, 230, 230, 0.95); /* Темнее серый цвет фона с легкой прозрачностью */
-            border-bottom: 2px solid #cccccc; /* Серая черта */
-            box-sizing: border-box;
-            z-index: 1000;
-        }     
-        .transparent-button {
-            background-color: rgba(255, 255, 255, 0.8); /* Увеличиваем непрозрачность фона */
-            border: 2px solid rgba(0, 0, 0, 0.8); /* Сделаем границу более заметной */
-            color: #333; /* Используем темно-серый для текста для лучшей видимости */
-            font-size: 16px;
+        }
+        .button {
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
             padding: 10px 20px;
             margin: 0 10px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: all 0.3s ease; /* Плавный переход для всех свойств */
-            opacity: 1; /* Установим полную непрозрачность */
-            text-decoration: none
-        }
-        
-        .transparent-button:hover {
-            background-color: #0056b3; /* Цвет фона при наведении */
-            color: #ffffff; /* Цвет текста при наведении */
-            border-color: #0056b3; /* Цвет границы при наведении */
             text-decoration: none;
+            font-size: 18px;
+            transition: background-color 0.3s, color 0.3s;
         }
-
-        .main-content {
+        .button:hover {
+            background-color: white;
+            color: black;
+        }
+        .welcome-text {
+            text-align: center;
+            font-size: 24px;
+            color: white;
+            font-weight: bold;
+            margin-top: 100px; /* Adjust as needed */
+        }
+        .project-buttons {
             display: flex;
-            flex-direction: column; /* Содержимое выстраивается в колонку */
-            align-items: center; /* Центрирование содержимого по горизонтали */
-            margin-top: 80px; /* Отступ от контейнера с кнопками */
-            width: 100%; /* Занимает всю доступную ширину */
+            justify-content: space-evenly;
+            margin-top: 50px; /* Adjust as needed */
         }
-        .welcome-section, .about-me-section {
-            max-width: 800px; /* Максимальная ширина для содержимого */
-            width: 100%; /* Адаптируется к размеру экрана */
-            text-align: center; /* Текст выравнивается по центру */
-            padding: 20px; /* Внутренние отступы для каждой секции */
+        .project-button {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: none;
+            color: black;
+            padding: 15px 0;
+            flex-grow: 1;
+            transition: background-color 0.3s;
+            text-decoration: none;
+            font-size: 18px;
+            margin: 0 5px;
         }
-        
-        h1, h2, h3 {
-            font-weight: normal;
-            margin: 10px 0; /* Отступы между заголовками */
-        }
-        
-        h1 {
-            font-size: 2.5em; /* Размер шрифта для приветственных слов */
-        }
-        
-        h2 {
-            font-size: 2em; /* Размер шрифта для фамилии и отчества */
-        }
-        
-        h3 {
-            font-size: 1.5em; /* Размер шрифта для заголовка раздела "Обо мне" */
-        }
-        
-        p {
-            font-size: 1em; /* Размер шрифта для абзацев */
-            line-height: 1.6; /* Межстрочный интервал */
+        .project-button:hover {
+            background-color: rgba(255, 255, 255, 1);
         }
     </style>
 </head>
 <body>
-<!-- Контейнер с кнопками -->
-    <div class="buttons-container">
-        <a href="https://github.com/datamagical/portfolio" class="transparent-button">Портфолио</a>
-        <a href="https://github.com/datamagical/portfolio/tree/main/Certificates" class="transparent-button">Сертификаты</a>
-        <button class="transparent-button">Сертификаты</https://github.com/datamagical/portfolio/tree/main/Certificates>
-    </div>
-    
-    <!-- Основной контент начинается здесь -->
-    <div class="main-content">
-        <div class="welcome-section">
-            <h1>Добро пожаловать на мою страничку!</h1>
-            <h2>Я, Евгений Грачёв, моя специализация Аналитик данных</h2>
-        </div>
-    
-        <!-- Раздел "Обо мне" и другие секции -->
-        <div class="about-me-section">
-            <h3>Обо мне</h3>
-            <p>Здесь будет информация о вас, ваших интересах, навыках и достижениях.</p>
-        </div>
-    </div>
+
+<div class="nav-container">
+    <a href="#resume" class="button">Resume</a>
+    <a href="#certificates" class="button">Certificates</a>
+    <a href="#portfolio" class="button">Portfolio</a>
+</div>
+
+<div class="welcome-text">
+    <h1>Welcome to My Portfolio</h1>
+</div>
+
+<div class="project-buttons">
+    <a href="#project1" class="project-button">Project 1</a>
+    <a href="#project2" class="project-button">Project 2</a>
+    <a href="#project3" class="project-button">Project 3</a>
+    <a href="#project4" class="project-button">Project 4</a>
+</div>
 
 </body>
 </html>
+
