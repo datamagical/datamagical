@@ -3,120 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Портфолио</title>
+    <title>Data Analyst Portfolio - Your Name</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        body, h1, p {
+        body {
             margin: 0;
             padding: 0;
             font-family: 'Roboto', sans-serif;
+            color: #333;
+            line-height: 1.6;
         }
         .container {
-            max-width: 1200px;
+            max-width: 1100px;
             margin: auto;
             padding: 0 20px;
         }
         header {
-            background: #333;
+            background: #0056b3;
             color: #fff;
-            padding: 20px 0;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: 1px solid #ffffff;
+        }
+        header h1 {
             text-align: center;
+            margin: 0;
         }
         nav ul {
-            padding: 0;
             list-style: none;
-            text-align: center;
+            padding: 0;
         }
         nav ul li {
             display: inline;
-            margin: 0 15px;
+            margin-right: 10px;
         }
         nav ul li a {
-            color: white;
+            color: #fff;
             text-decoration: none;
-            font-weight: 700;
         }
-        .hero {
-            padding: 50px 0;
-            background: linear-gradient(to right, #2980b9, #6dd5fa);
-            color: white;
+        .intro {
+            padding: 20px 0;
+            background-color: #f4f4f4;
+        }
+        .intro h1, .intro p {
             text-align: center;
         }
-        .hero h1 {
-            margin-bottom: 20px;
+        .main-content, .projects-content, .contact-content {
+            padding: 20px 0;
         }
-        section {
-            padding: 50px 0;
-        }
-        .about, .projects {
-            background: #f4f4f4;
-        }
-        .contact {
+        footer {
             background: #333;
             color: #fff;
             text-align: center;
-        }
-        footer {
-            background: #222;
-            color: #bbb;
-            text-align: center;
-            padding: 20px 0;
+            padding: 10px;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>Data Insights Portfolio</h1>
+            <h1>Data Analyst Portfolio - Your Name</h1>
         </div>
     </header>
 
     <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+        <div class="container">
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <div class="hero">
+    <div class="intro" id="about">
         <div class="container">
-            <h1>Добро пожаловать в моё портфолио</h1>
-            <p>Discover my projects and experience in data analysis.</p>
+            <h1>Welcome!</h1>
+            <p>I'm a passionate Data Analyst with a knack for turning data into actionable insights. This portfolio showcases my projects and achievements in data analysis. Dive in to see how I make data speak!</p>
         </div>
     </div>
 
-    <section id="about" class="about">
+    <div class="main-content" id="projects">
         <div class="container">
-            <h1>About Me</h1>
-            <p>I'm a data analyst with a passion for turning data into actionable insights and meaningful stories...</p>
-        </div>
-    </section>
-
-    <section id="projects" class="projects">
-        <div class="container">
-            <h1>Мои проекты:</h1>
-            <div class="project-item">
-                <a href="https://github.com/datamagical/portfolio/tree/main/Cohort_RFM_analysis">
-                    <img src="https://miro.medium.com/v2/resize:fit:724/1*wRnGwZXh_hSRmZjNjTZALw.png" alt="RFM and Cohort analysis" style="width:100%;max-width:300px;">
-                </a>
-                <p>RFM и когортный анализ пользователей. <a href="https://example.com/your-project-page">Данный проект включает в себя несколько важных для аналитика данных умений, таких как: предварительный анализ данных, проведение когортного анализа, анализ оттока клиентов, а также сегментационный анализ клиентов - RFM анализ.</a></p>
+            <h1>Projects</h1>
+            <div class="projects-content">
+                <!-- Project 1 -->
+                <h2>Project Title One</h2>
+                <p>Description of what was accomplished in Project One, the tools used, and the outcomes.</p>
+                <a href="http://example.com">View Project</a>
+                
+                <!-- Add more projects here -->
             </div>
-            <!-- Добавьте больше проектов аналогичным образом -->
         </div>
-    </section>
+    </div>
 
-
-    <section id="contact" class="contact">
+    <div class="contact-content" id="contact">
         <div class="container">
             <h1>Contact</h1>
-            <p>Feel free to reach out for collaborations or questions!</p>
-            <p>Email: imagical93@outlook.com</p>
+            <p>Interested in collaborating or learning more about my work? Reach out to me at <a href="mailto:your.email@example.com">your.email@example.com</a>.</p>
         </div>
-    </section>
+    </div>
 
     <footer>
-        <p>Copyright &copy; 2024 Evgeniy Grachev. All rights reserved.</p>
+        <p>Copyright &copy; 2023 Your Name</p>
     </footer>
 </body>
 </html>
