@@ -25,23 +25,22 @@
         }
         
         .transparent-button {
-            background-color: rgba(255, 255, 255, 0); /* Полностью прозрачный фон */
-            border: 2px solid transparent; /* Прозрачная граница */
-            color: rgba(0, 0, 0, 0.5); /* Полупрозрачный текст */
+            background-color: rgba(255, 255, 255, 0.8); /* Увеличиваем непрозрачность фона */
+            border: 2px solid rgba(0, 0, 0, 0.8); /* Сделаем границу более заметной */
+            color: #333; /* Используем темно-серый для текста для лучшей видимости */
             font-size: 16px;
             padding: 10px 20px;
             margin: 0 5px;
             border-radius: 5px;
             cursor: pointer;
             transition: all 0.3s ease; /* Плавный переход для всех свойств */
-            opacity: 0.5; /* Начальная прозрачность кнопок */
+            opacity: 1; /* Установим полную непрозрачность */
         }
         
         .transparent-button:hover {
-            background-color: rgba(255, 255, 255, 1); /* Непрозрачный фон при наведении */
-            border-color: #0056b3; /* Синяя граница при наведении */
-            color: #333; /* Темно-серый текст при наведении */
-            opacity: 1; /* Полная непрозрачность при наведении */
+            background-color: #0056b3; /* Цвет фона при наведении */
+            color: #ffffff; /* Цвет текста при наведении */
+            border-color: #0056b3; /* Цвет границы при наведении */
         }
 
         .main-content {
