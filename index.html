@@ -18,29 +18,32 @@
         .buttons-container {
             position: fixed;
             top: 0;
-            left: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.8);
-            text-align: center;
-            padding: 10px 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            right: 0;
+            padding: 10px; /* Небольшой отступ для красоты */
             z-index: 1000;
+            text-align: right; /* Выравниваем кнопки по правому краю */
         }
+        
         .transparent-button {
-            background-color: rgba(255, 255, 255, 0.5);
-            border: 2px solid rgba(0, 0, 0, 0.5);
-            color: #333;
+            background-color: rgba(255, 255, 255, 0); /* Полностью прозрачный фон */
+            border: 2px solid transparent; /* Прозрачная граница */
+            color: rgba(0, 0, 0, 0.5); /* Полупрозрачный текст */
             font-size: 16px;
             padding: 10px 20px;
-            margin: 5px;
+            margin: 0 5px;
             border-radius: 5px;
             cursor: pointer;
-            transition: background-color 0.3s, color 0.3s;
+            transition: all 0.3s ease; /* Плавный переход для всех свойств */
+            opacity: 0.5; /* Начальная прозрачность кнопок */
         }
+        
         .transparent-button:hover {
-            background-color: rgba(255, 255, 255, 0.7);
-            color: #000;
+            background-color: rgba(255, 255, 255, 1); /* Непрозрачный фон при наведении */
+            border-color: #0056b3; /* Синяя граница при наведении */
+            color: #333; /* Темно-серый текст при наведении */
+            opacity: 1; /* Полная непрозрачность при наведении */
         }
+
         .main-content {
             /* Стили для основного контента страницы */
             padding: 20px;
