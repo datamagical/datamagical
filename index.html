@@ -10,125 +10,54 @@
             margin: 0;
             padding: 0;
             font-family: 'EB Garamond', sans-serif;
-            background-color: #f0f0f0; /* Светло-серый фон */
-            color: #333; /* Текст темно-серым для контраста */
-        }
-        .container {
-            max-width: 1100px;
-            margin: auto;
-            padding: 0 20px;
-        }
-        header {
-            background: transparent;
             color: #333;
-            padding-top: 30px;
-            min-height: 70px;
-            border-bottom: 1px solid #ffffff;
+            line-height: 1.6;
+            background-color: #f0f0f0;
+            padding-top: 60px; /* Добавляем отступ в верхней части страницы */
         }
-        header h1 {
-            text-align: center;
-            margin: 0;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin-right: 10px;
-        }
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-        }
-        .intro {
-            padding: 20px 0;
-            background-color: transparent;
-        }
-        .intro h1, .intro p {
-            text-align: center;
-        }
-        .main-content, .projects-content, .contact-content {
-            padding: 20px 0;
-        }
-        footer {
-            background: transparent;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
+        .buttons-container {
             position: fixed;
+            top: 0;
             left: 0;
-            bottom: 0;
             width: 100%;
+            background: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 10px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            z-index: 1000;
         }
-        .btn {
-            margin-top: -10px;
-            display: inline-block;
-            background-color: #0056b3;
-            color: white;
+        .transparent-button {
+            background-color: rgba(255, 255, 255, 0.5);
+            border: 2px solid rgba(0, 0, 0, 0.5);
+            color: #333;
+            font-size: 16px;
             padding: 10px 20px;
-            text-decoration: none;
+            margin: 5px;
             border-radius: 5px;
-            font-weight: bold;
-            transition: background-color 0.3s;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
         }
-        .btn:hover {
-            background-color: #004494;
+        .transparent-button:hover {
+            background-color: rgba(255, 255, 255, 0.7);
+            color: #000;
         }
-        .contact-text {
-            margin-bottom: 10px; /* Или другое значение, чтобы уменьшить пространство */
+        .main-content {
+            /* Стили для основного контента страницы */
+            padding: 20px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Data Analyst Portfolio - Your Name</h1>
-        </div>
-    </header>
-
-    <nav>
-        <div class="container">
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <div class="intro" id="about">
-        <div class="container">
-            <h1>Welcome!</h1>
-            <p>I'm a passionate Data Analyst with a knack for turning data into actionable insights. This portfolio showcases my projects and achievements in data analysis. Dive in to see how I make data speak!</p>
-        </div>
+    <div class="buttons-container">
+        <button class="transparent-button">Projects</button>
+        <button class="transparent-button">About</button>
+        <button class="transparent-button">Resume</button>
     </div>
 
-    <div class="main-content" id="projects">
-        <div class="container">
-            <h1>Projects</h1>
-            <div class="projects-content">
-                <!-- Project 1 -->
-                <h2>Project Title One</h2>
-                <p>Description of what was accomplished in Project One, the tools used, and the outcomes.</p>
-                <a href="http://example.com">View Project</a>
-                
-                <!-- Add more projects here -->
-            </div>
-        </div>
-    </div> 
-
-    <div class="contact-content">
-        <div class="container">
-            <h1>Мои контакты:</h1>
-            <a href="mailto:imagical93@outlook.com" class="btn">Отправить письмо</a>
-        </div>
+    <div class="main-content">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Hello! I'm a passionate Data Analyst with a knack for turning data into actionable insights.</p>
+        <!-- Дополнительное содержимое -->
     </div>
-
-    
-    <footer>
-        <p>Copyright &copy; 2023 Your Name</p>
-    </footer>
 </body>
 </html>
-
