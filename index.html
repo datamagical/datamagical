@@ -16,26 +16,27 @@
             padding-top: 60px; /* Добавляем отступ в верхней части страницы */
         }
         .buttons-container {
+            display: flex; /* Используем Flexbox */
+            justify-content: center; /* Центрируем кнопки горизонтально */
+            align-items: center; /* Центрируем кнопки вертикально */
             position: fixed;
             top: 0;
-            left: 0; /* Гарантирует, что контейнер растягивается от одного края экрана к другому */
-            width: 100%; /* Заставляет контейнер занимать всю ширину страницы */
-            padding: 10px 0; /* Верхний и нижний отступы */
-            padding-bottom: 20px; /* Увеличиваем нижний отступ, чтобы создать место для черты */
-            background: rgba(230, 230, 230, 0.95);
-            text-align: right;
-            z-index: 1000;
+            left: 0;
+            width: 100%;
+            height: 100px; /* Задаем фиксированную высоту контейнера */
+            padding: 10px 0;
+            background: rgba(230, 230, 230, 0.95); /* Темнее серый цвет фона с легкой прозрачностью */
             border-bottom: 2px solid #cccccc; /* Серая черта */
-            box-sizing: border-box; /* Включаем границы и отступы в общую ширину элемента */
-        }
-        
+            box-sizing: border-box;
+            z-index: 1000;
+        }     
         .transparent-button {
             background-color: rgba(255, 255, 255, 0.8); /* Увеличиваем непрозрачность фона */
             border: 2px solid rgba(0, 0, 0, 0.8); /* Сделаем границу более заметной */
             color: #333; /* Используем темно-серый для текста для лучшей видимости */
             font-size: 16px;
             padding: 10px 20px;
-            margin: 0 5px;
+            margin: 0 10px;
             border-radius: 5px;
             cursor: pointer;
             transition: all 0.3s ease; /* Плавный переход для всех свойств */
