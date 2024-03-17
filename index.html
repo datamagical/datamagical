@@ -6,7 +6,6 @@
     <title>My GitHub Portfolio</title>
     <style>
         body, html {
-            height: 100%;
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
@@ -14,14 +13,18 @@
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            display: flex;
-            flex-direction: column;
+            color: white;
         }
         .nav-container {
-            background-color: rgba(0, 0, 0, 0.6); /* Darker background for button container */
-            padding: 10px 0;
-            text-align: center;
+            background-color: rgba(0, 0, 0, 0.7); /* Darker background for the nav container */
+            padding: 20px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 1px solid #ccc;
+            position: fixed;
             width: 100%;
+            z-index: 1000; /* Ensure nav container is above other content */
         }
         .button {
             background-color: transparent;
@@ -31,36 +34,44 @@
             text-decoration: none;
             font-size: 18px;
             transition: background-color 0.3s, color 0.3s;
+            border: none;
         }
         .button:hover {
-            background-color: white;
+            background-color: rgba(255, 255, 255, 0.8);
             color: black;
         }
         .welcome-text {
             text-align: center;
             font-size: 24px;
-            color: white;
-            font-weight: bold;
-            margin: 20px 0;
+            margin-top: 100px; /* Space below the fixed nav container */
+            padding: 20px;
         }
         .projects-container {
-            width: 100%;
-            text-align: center;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 60px; /* Added extra space for fixed nav */
+            padding-bottom: 20px; /* Space for the bottom border */
+            border-bottom: 2px solid #ccc; /* Separate from content below */
         }
         .project {
-            background-color: rgba(255, 255, 255, 0.1); /* Slight background for project descriptions */
-            margin: 10px;
-            color: white;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
             padding: 20px;
-            border: 2px solid white; /* Border added */
-            border-radius: 15px; /* Rounded borders for project blocks */
-            margin-bottom: 20px; /* Consistent space between projects */
+            margin: 10px;
+            flex-basis: calc(33.333% - 20px); /* Adjust width for 3 items per row, accounting for margin */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Shadow for depth */
         }
         .project h2 {
-            margin-top: 0;
+            margin: 0;
+            padding: 10px 0;
         }
         .project p {
-            margin-top: 10px;
+            padding: 10px 0;
+        }
+        /* Ensures content starts below the fixed navbar */
+        .main-content {
+            padding-top: 120px; /* Height of the nav container plus some extra space */
         }
     </style>
 </head>
@@ -72,22 +83,24 @@
     <a href="#portfolio" class="button">Portfolio</a>
 </div>
 
-<div class="welcome-text">
-    <h1>Welcome to My Portfolio</h1>
-</div>
+<div class="main-content">
+    <div class="welcome-text">
+        <h1>Welcome to My Portfolio</h1>
+    </div>
 
-<div class="projects-container">
-    <div class="project">
-        <h2>Project 1</h2>
-        <p>Description of Project 1...</p>
-    </div>
-    <div class="project">
-        <h2>Project 2</h2>
-        <p>Description of Project 2...</p>
-    </div>
-    <div class="project">
-        <h2>Project 3</h2>
-        <p>Description of Project 3...</p>
+    <div class="projects-container">
+        <div class="project">
+            <h2>Project 1</h2>
+            <p>Description of Project 1...</p>
+        </div>
+        <div class="project">
+            <h2>Project 2</h2>
+            <p>Description of Project 2...</p>
+        </div>
+        <div class="project">
+            <h2>Project 3</h2>
+            <p>Description of Project 3...</p>
+        </div>
     </div>
 </div>
 
