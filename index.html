@@ -14,23 +14,26 @@
             background-position: center;
             background-attachment: fixed;
             color: white;
-            display: flex;
-            flex-direction: column;
         }
         .nav-container {
             background-color: rgba(0, 0, 0, 0.7); /* Darker background for button container */
-            padding: 10px 0;
+            padding: 20px 0; /* Increased padding */
             text-align: center;
             width: 100%;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Adding shadow for depth */
+            position: fixed;
+            top: 0;
+            z-index: 1000; /* Ensure nav container is above other content */
         }
         .button {
             background-color: transparent;
             color: white;
             padding: 10px 20px;
-            margin: 0 10px;
+            margin: 0 15px; /* Increased margin */
             text-decoration: none;
             font-size: 18px;
             transition: background-color 0.3s, color 0.3s;
+            border: none;
         }
         .button:hover {
             background-color: white;
@@ -39,22 +42,28 @@
         .welcome-text {
             text-align: center;
             font-size: 24px;
-            margin-top: 100px; /* Space below the fixed nav container */
+            margin-top: 140px; /* Space below the fixed nav container */
             padding: 20px;
         }
         .projects-container {
             display: flex;
-            justify-content: space-around; /* Равномерное распределение элементов */
-            flex-wrap: wrap;
+            flex-direction: column; /* Align projects in a column */
+            align-items: center; /* Center projects */
             padding: 20px;
-            margin-top: 20px; /* Добавлено пространство между элементами */
+            margin-top: 60px; /* Added extra space for fixed nav */
+        }
+        .project-row {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            width: 100%; /* Make sure it takes full width */
         }
         .project {
             background-color: rgba(255, 255, 255, 0.1);
             border-radius: 15px;
             padding: 20px;
             margin: 10px;
-            flex-basis: calc(25% - 20px); /* Adjusted for 4 items per row, accounting for margin */
+            flex-basis: calc(50% - 20px); /* Adjusted for 2 items per row, accounting for margin */
             box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
         .project h2 {
@@ -63,15 +72,15 @@
         .project p {
             margin-top: 10px;
         }
-        /* Ensures content starts below the fixed navbar */
-        .main-content {
-            padding-top: 120px; /* Height of the nav container plus some extra space */
-        }
         .about-text {
             text-align: center;
-            font-size: 16px; /* Меньше, чем основной заголовок */
+            font-size: 16px;
             margin: 10px 0;
-            font-weight: normal; /* Не жирный шрифт */
+            font-weight: normal;
+        }
+        /* Adjust padding-top according to the height of the nav container */
+        .main-content {
+            padding-top: 180px; /* Increased padding-top */
         }
     </style>
 </head>
@@ -86,25 +95,29 @@
 <div class="main-content">
     <div class="welcome-text">
         <h1>Welcome to My Portfolio</h1>
-        <p class="about-text">Here is a brief description about me, showcasing my skills and passions in the field of data analysis.</p>
+        <p class="about-text">A brief description about me and my data analysis specialization.</p>
     </div>
 
     <div class="projects-container">
-        <div class="project">
-            <h2>Project 1</h2>
-            <p>Description of Project 1...</p>
+        <div class="project-row">
+            <div class="project">
+                <h2>Project 1</h2>
+                <p>Description of Project 1...</p>
+            </div>
+            <div class="project">
+                <h2>Project 2</h2>
+                <p>Description of Project 2...</p>
+            </div>
         </div>
-        <div class="project">
-            <h2>Project 2</h2>
-            <p>Description of Project 2...</p>
-        </div>
-        <div class="project">
-            <h2>Project 3</h2>
-            <p>Description of Project 3...</p>
-        </div>
-        <div class="project">
-            <h2>Project 4</h2>
-            <p>Description of Project 4...</p>
+        <div class="project-row">
+            <div class="project">
+                <h2>Project 3</h2>
+                <p>Description of Project 3...</p>
+            </div>
+            <div class="project">
+                <h2>Project 4</h2>
+                <p>Description of Project 4...</p>
+            </div>
         </div>
     </div>
 </div>
