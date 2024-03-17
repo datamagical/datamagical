@@ -8,7 +8,6 @@
         body, html {
             margin: 0;
             padding: 0;
-            font-size: 14px;
             font-family: Arial, sans-serif;
             background-image: url('https://github.com/datamagical/portfolio/blob/main/Certificates/fon_100.jpeg?raw=true');
             background-size: cover;
@@ -34,11 +33,14 @@
             margin: 0 15px;
             text-decoration: none;
             font-size: 18px;
-            transition: background-color 0.3s, color 0.3s;
+            transition: background-color 0.3s, color 0.3s, border-radius 0.3s;
+            border: 2px solid white;
+            border-radius: 5px;
         }
         .button:hover {
             background-color: white;
             color: black;
+            border-radius: 25px;
         }
         .welcome-text {
             text-align: center;
@@ -60,7 +62,7 @@
             margin: 10px;
             flex-basis: calc(50% - 40px); /* Adjust for 2 items per row, accounting for margin */
             box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-            max-width: calc(50% - 40px); /* Ensuring that the flex basis is not exceeded */
+            max-width: calc(50% - 40px);
         }
         .about-text {
             text-align: center;
@@ -71,18 +73,7 @@
         .contact-container {
             text-align: center;
             padding: 20px;
-            margin-top: 20px; /* Space before the contact information */
-        }
-        .highlight-name {
-            font-weight: bold; /* Делает текст жирным */
-        .about-text, .project p {
-            font-size: 14px; /* Уточнение размера шрифта для текста абзацев */
-        }
-        .nav-container .button, .welcome-text h1, .projects-container .project h2, .contact-container .email {
-            font-size: 16px; /* Увеличиваем размер шрифта для ключевых элементов */
-        }
-        .welcome-text h1 {
-            font-size: 22px; /* Специфическое уменьшение для заголовка */
+            margin-top: 20px;
         }
         .email {
             background-color: rgba(0, 0, 0, 0.7);
@@ -103,9 +94,8 @@
 <div class="main-content">
     <div class="welcome-text">
         <h1>Приветствую, я <span class="highlight-name">Евгений Грачёв</span>, а это моя страница с портфолио</h1>
-        <p class="about-text">Мои путь к данным начался не так давно, я прошел успешно курсы Аналитик данных, Симулятор аналитика на karpov.courses, где приобрёл неоценимый опыт и знания, а именно, мною был освоен язык програмирования Python, я поработал с аналитическими базами данных PostgeSQL, ClickHouse, автоматизировал телеграм-бота для отправки сообщений при помощи AirFlow, визуализировал данные посредствам BI систем, таких как SuperSet, Redash, познакомился с Теорией вероятности, математической статистикой, проводил A/B тесты. </p>
+        <p class="about-text">Мои путь к данным начался не так давно, я прошел успешно курсы Аналитик данных, Симулятор аналитика на karpov.courses, где приобрёл неоценимый опыт и знания...</p>
     </div>
-
 
     <div class="projects-container">
         <div class="project">
@@ -133,7 +123,6 @@
 
 </body>
 </html>
-
 
 
 
