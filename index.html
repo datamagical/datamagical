@@ -50,13 +50,17 @@
         }
 
         .main-content {
-            /* Стили для основного контента страницы */
-            padding: 20px;
+            display: flex;
+            flex-direction: column; /* Содержимое выстраивается в колонку */
+            align-items: center; /* Центрирование содержимого по горизонтали */
+            margin-top: 80px; /* Отступ от контейнера с кнопками */
+            width: 100%; /* Занимает всю доступную ширину */
         }
         .welcome-section, .about-me-section {
-            max-width: 800px; /* Максимальная ширина разделов */
-            margin: auto; /* Выравнивание разделов по центру */
-            padding: 20px; /* Отступы внутри разделов */
+            max-width: 800px; /* Максимальная ширина для содержимого */
+            width: 100%; /* Адаптируется к размеру экрана */
+            text-align: center; /* Текст выравнивается по центру */
+            padding: 20px; /* Внутренние отступы для каждой секции */
         }
         
         h1, h2, h3 {
@@ -83,20 +87,25 @@
     </style>
 </head>
 <body>
+<!-- Контейнер с кнопками -->
     <div class="buttons-container">
         <button class="transparent-button">Projects</button>
         <button class="transparent-button">About</button>
         <button class="transparent-button">Resume</button>
     </div>
-
-    <div class="welcome-section">
-        <h1>Добро пожаловать!</h1>
-        <h2>Ваша Фамилия Отчество</h2>
-    </div>
     
-    <div class="about-me-section">
-        <h3>Обо мне</h3>
-        <p>Здесь будет информация о вас, ваших интересах, навыках и достижениях.</p>
+    <!-- Основной контент начинается здесь -->
+    <div class="main-content">
+        <div class="welcome-section">
+            <h1>Добро пожаловать!</h1>
+            <h2>Ваша Фамилия Отчество</h2>
+        </div>
+    
+        <!-- Раздел "Обо мне" и другие секции -->
+        <div class="about-me-section">
+            <h3>Обо мне</h3>
+            <p>Здесь будет информация о вас, ваших интересах, навыках и достижениях.</p>
+        </div>
     </div>
 
 </body>
