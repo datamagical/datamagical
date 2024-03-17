@@ -9,31 +9,31 @@
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            background-image: url('https://github.com/datamagical/portfolio/blob/main/Certificates/neww.jpg?raw=true');
+            background-image: url('https://github.com/datamagical/portfolio/blob/main/Certificates/fon_100.jpeg?raw=true');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
             color: white;
+            display: flex;
+            flex-direction: column;
         }
         .nav-container {
-            background-color: rgba(0, 0, 0, 0.7); /* Darker background for button container */
-            padding: 20px 0; /* Increased padding */
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px 0;
             text-align: center;
             width: 100%;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Adding shadow for depth */
             position: fixed;
             top: 0;
-            z-index: 1000; /* Ensure nav container is above other content */
+            z-index: 1000;
         }
         .button {
             background-color: transparent;
             color: white;
             padding: 10px 20px;
-            margin: 0 15px; /* Increased margin */
+            margin: 0 15px;
             text-decoration: none;
             font-size: 18px;
             transition: background-color 0.3s, color 0.3s;
-            border: none;
         }
         .button:hover {
             background-color: white;
@@ -42,35 +42,24 @@
         .welcome-text {
             text-align: center;
             font-size: 24px;
-            margin-top: 140px; /* Space below the fixed nav container */
+            margin-top: 80px; /* Reduced space below the fixed nav container */
             padding: 20px;
         }
         .projects-container {
             display: flex;
-            flex-direction: column; /* Align projects in a column */
-            align-items: center; /* Center projects */
-            padding: 20px;
-            margin-top: 60px; /* Added extra space for fixed nav */
-        }
-        .project-row {
-            display: flex;
-            justify-content: space-around;
             flex-wrap: wrap;
-            width: 100%; /* Make sure it takes full width */
+            justify-content: center;
+            padding: 20px;
+            margin-top: 40px; /* Reduced space from the welcome text */
         }
         .project {
             background-color: rgba(255, 255, 255, 0.1);
             border-radius: 15px;
             padding: 20px;
             margin: 10px;
-            flex-basis: calc(50% - 20px); /* Adjusted for 2 items per row, accounting for margin */
+            flex-basis: calc(50% - 40px); /* Adjust for 2 items per row, accounting for margin */
             box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-        }
-        .project h2 {
-            margin-top: 0;
-        }
-        .project p {
-            margin-top: 10px;
+            max-width: calc(50% - 40px); /* Ensuring that the flex basis is not exceeded */
         }
         .about-text {
             text-align: center;
@@ -78,9 +67,16 @@
             margin: 10px 0;
             font-weight: normal;
         }
-        /* Adjust padding-top according to the height of the nav container */
-        .main-content {
-            padding-top: 180px; /* Increased padding-top */
+        .contact-container {
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px; /* Space before the contact information */
+        }
+        .email {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 15px;
         }
     </style>
 </head>
@@ -99,26 +95,26 @@
     </div>
 
     <div class="projects-container">
-        <div class="project-row">
-            <div class="project">
-                <h2>Project 1</h2>
-                <p>Description of Project 1...</p>
-            </div>
-            <div class="project">
-                <h2>Project 2</h2>
-                <p>Description of Project 2...</p>
-            </div>
+        <div class="project">
+            <h2>Project 1</h2>
+            <p>Description of Project 1...</p>
         </div>
-        <div class="project-row">
-            <div class="project">
-                <h2>Project 3</h2>
-                <p>Description of Project 3...</p>
-            </div>
-            <div class="project">
-                <h2>Project 4</h2>
-                <p>Description of Project 4...</p>
-            </div>
+        <div class="project">
+            <h2>Project 2</h2>
+            <p>Description of Project 2...</p>
         </div>
+        <div class="project">
+            <h2>Project 3</h2>
+            <p>Description of Project 3...</p>
+        </div>
+        <div class="project">
+            <h2>Project 4</h2>
+            <p>Description of Project 4...</p>
+        </div>
+    </div>
+
+    <div class="contact-container">
+        <p class="email">Email: your.email@example.com</p>
     </div>
 </div>
 
