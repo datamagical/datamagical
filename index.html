@@ -19,15 +19,14 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100px; /* Adjust height as needed */
-            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+            height: 100px;
             position: relative;
             top: 0;
             width: 100%;
+            border-bottom: 2px solid #ccc;
         }
         .button {
-            background-color: transparent;
-            border: 2px solid white;
+            background-color: rgba(0, 0, 0, 0.5); /* Slightly dark background for buttons */
             color: white;
             padding: 10px 20px;
             margin: 0 10px;
@@ -36,7 +35,7 @@
             transition: background-color 0.3s, color 0.3s;
         }
         .button:hover {
-            background-color: white;
+            background-color: rgba(255, 255, 255, 0.8);
             color: black;
         }
         .welcome-text {
@@ -44,26 +43,44 @@
             font-size: 24px;
             color: white;
             font-weight: bold;
-            margin-top: 100px; /* Adjust as needed */
+            margin-top: 150px; /* Added extra space */
         }
         .project-buttons {
             display: flex;
-            justify-content: space-evenly;
-            margin-top: 50px; /* Adjust as needed */
+            justify-content: space-between;
+            margin-top: 50px;
+            padding: 0 10%; /* Padding on the sides */
         }
         .project-button {
-            background-color: rgba(255, 255, 255, 0.8);
+            background-color: transparent;
             border: none;
-            color: black;
+            color: white;
             padding: 15px 0;
-            flex-grow: 1;
-            transition: background-color 0.3s;
-            text-decoration: none;
+            flex-basis: 24%; /* Adjust the width of the buttons */
+            text-align: center;
             font-size: 18px;
-            margin: 0 5px;
+            transition: background-color 0.3s;
+            border-radius: 25px; /* Semi-rounded borders */
+            border: 2px solid white; /* Border added */
         }
         .project-button:hover {
-            background-color: rgba(255, 255, 255, 1);
+            background-color: rgba(255, 255, 255, 0.1); /* Slight background on hover */
+        }
+        .project-descriptions {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 0 10%;
+        }
+        .project-description {
+            background-color: rgba(255, 255, 255, 0.1); /* Slight background for project descriptions */
+            margin: 10px;
+            flex-basis: 45%; /* Adjust width of the project blocks */
+            border-radius: 15px; /* Rounded borders for project blocks */
+            color: white;
+            padding: 20px;
+            border: 2px solid white; /* Border added */
         }
     </style>
 </head>
@@ -86,6 +103,19 @@
     <a href="#project4" class="project-button">Project 4</a>
 </div>
 
+<div class="project-descriptions">
+    <div class="project-description">
+        <h2>Project 1</h2>
+        <p>Description of Project 1...</p>
+    </div>
+    <div class="project-description">
+        <h2>Project 2</h2>
+        <p>Description of Project 2...</p>
+    </div>
+    <!-- Repeat for other projects -->
+</div>
+
 </body>
 </html>
+
 
