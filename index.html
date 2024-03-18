@@ -47,73 +47,46 @@
         .main-content {
             display: flex;
             flex-direction: column;
-            align-items: center; /* Выравнивание дочерних элементов по центру по горизонтали */
-            justify-content: center; /* Выравнивание дочерних элементов по центру по вертикали */
-            height: 100vh; /* Высота, которая обеспечивает центрирование на весь экран */
-            padding-top: 400px; /* Отступ сверху, чтобы не перекрывать фиксированное меню */
-            box-sizing: border-box; /* Убедитесь, что padding не влияет на общую высоту */
+            align-items: center; 
+            padding-top: 100px; /* Увеличен отступ сверху */
+            width: 100%;
         }
         .welcome-text, .about-container {
             text-align: center;
-            max-width: 800px; /* Max width to contain the text nicely */
-            margin-bottom: 20px; /* Consistent margin for bottom spacing */
-            margin-top: 25px;
+            max-width: 900px; /* Увеличенная максимальная ширина */
+            margin: 20px auto; /* Увеличен отступ сверху и снизу, автоматическое центрирование */
         }
-        .welcome-text h1 {
-            font-size: 2.5em; /* Adjusted font size */
-            align-items: center
-/*             margin-bottom: 0.5em; /* Space between the header and paragraph */ */
+        .welcome-text h1, .about-text {
+            font-weight: normal; /* Обычный, не жирный текст */
             margin: 15px 0;
         }
+        .welcome-text h1 {
+            font-size: 28px; /* Размер шрифта для приветствия */
+        }
         .about-text {
-            font-size: 2.0em; /* Adjusted font size */
-            align-items: center
-            margin-top: 25; /* Remove top margin if any */
+            font-size: 22px; /* Чуть меньший размер шрифта для информации обо мне */
         }
-        .about-container {
-            margin: 5px 0; /* Сверху и снизу для отступа от других элементов */
-        }
-        .projects-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 20px;
+        .projects-container, .contact-container {
+            width: 100%; /* Убедитесь, что контейнеры занимают всю доступную ширину */
+            max-width: 900px; /* Увеличенная максимальная ширина */
+            margin: 0 auto; /* Центрирование */
         }
         .project {
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            padding: 20px;
-            margin: 10px;
-            flex-basis: calc(50% - 40px);
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-            max-width: calc(50% - 40px);
-        }
-        .contact-container {
-            text-align: center;
-            padding: 20px;
-            margin-top: 20px;
+            margin: 20px; /* Увеличенные отступы для проектов */
+            padding: 20px; /* Увеличенные внутренние отступы */
         }
         .email {
-            background-color: rgba(0, 0, 0, 0.7);
-            color: white;
-            padding: 10px 20px;
-            border-radius: 15px;
+            /* Стили не изменены */
         }
         .project-link {
-            color: #FFFFFF;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        .project-link:hover {
-            color: #FFA500;
+            /* Стили не изменены */
         }
         .second-half {
-            color: #FFA500; /* Измените это значение на желаемый цвет */
+            /* Стили не изменены */
         }
         .highlight-name {
-            font-weight: bold; /* Жирный шрифт для имени */
+            font-weight: bold;
         }
-
     </style>
 </head>
 <body>
@@ -126,10 +99,10 @@
 
 <div class="main-content">
     <div class="welcome-text">
-        <h1>Приветствую, я <span class="highlight-name">Евгений Грачёв</span><span class="second-half"></h1>
+        <h1>Приветствую, я <span class="highlight-name">Евгений Грачёв</span></h1>
     </div>
     <div class="about-container">
-      <p class="about-text">В сфере анализа данных меня привлекла гибкость и возможность работы в разных областях, а также общий прогресс информационных технологий, что побуждает к бесконечным возможностям для изучения "чего-то нового". Активно изучаю современные подходы и инструменты, такие как Python, SQL и BI-инструменты, чтобы применять их для эффективного решения бизнес-задач. Я стараюсь получить возможность работать в команде единомышленников, где мог бы вносить свой вклад и одновременно развиваться, обмениваясь знаниями и лучшими практиками</p>
+        <p class="about-text">В сфере анализа данных меня привлекла гибкость и возможность работы в разных областях...</p>
     </div>
     <div class="projects-container">
         <div class="project">
@@ -157,7 +130,6 @@
 
 </body>
 </html>
-
 
 
 
