@@ -173,114 +173,100 @@
             display: inline-block;
             background: #e9e9e9;
             color: #333;
-            padding: 10px 20px;
+            padding: 12px 25px;
+            font-size: 18px;
             border: none;
+            border-radius: 50px;
             cursor: pointer;
-            transition: background 0.3s;
+            transition: background 0.3s ease;
         }
-        
+
         #contact form button:hover {
-            background: #cccccc;
+            background: #ffffff;
         }
-        
+
         /* Footer styles */
         footer {
-            background: #333;
-            color: #ffffff;
+            background: #e9e9e9;
+            color: #333;
             text-align: center;
-            padding: 20px 0;
+            padding: 10px 0;
+            position: sticky;
+            bottom: 0;
+            width: 100%;
         }
-        
-        /* Responsive design */
-        @media (max-width: 768px) 
-        {
-            .header-title {
-                font-size: 2em;
+
+        /* Responsive media queries */
+        @media (max-width: 768px) {
+            .work-gallery {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             }
-        
-            .header-subtitle {
-                font-size: 1em;
-            }
-        
+
             nav ul {
                 flex-direction: column;
-                text-align: center;
+                padding: 0;
             }
-    </style>
 
+            nav ul li {
+                margin-bottom: 10px;
+            }
+
+            .header-title {
+                font-size: 2.5em;
+            }
+
+            .header-subtitle {
+                font-size: 1.3em;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="container">
-                <h1 class="logo">Marlon</h1>
-                <ul class="nav">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#works">Works</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-        <div class="intro">
-            <div class="container">
-                <h2>Hi, I'm Marlon</h2>
-                <p>I am a Web Designer</p>
-                <a href="#contact" class="btn">Contact</a>
-            </div>
-        </div>
-    </header>
-    
-    <section id="about">
+
+    <!-- Navigation Bar -->
+    <nav>
         <div class="container">
-            <h3>About Me</h3>
-            <p>I am a passionate web designer with 5 years of experience. I love creating user-friendly and aesthetically pleasing websites. I specialize in front-end development and am skilled in HTML, CSS, JavaScript, and various web design tools.</p>
-        </div>
-    </section>
-    
-    <section id="skills">
-        <div class="container">
-            <h3>Skills</h3>
+            <div class="logo">
+                Marlon
+            </div>
             <ul>
-                <li>HTML/CSS</li>
-                <li>JavaScript</li>
-                <li>Responsive Design</li>
-                <li>User Experience</li>
-                <li>Web Performance Optimization</li>
-                <li>SEO Best Practices</li>
-                <!-- More skills here -->
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#works">Works</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
-    </section>
-    
-    <section id="works">
+    </nav>
+
+    <!-- Hero Header -->
+    <header id="home">
         <div class="container">
-            <h3>Works</h3>
-            <div id="work-container">
-                <!-- Portfolio items will be inserted here by JavaScript -->
-            </div>
+            <h1 class="header-title">Marlon - Web Designer</h1>
+            <p class="header-subtitle">Creating beautiful web experiences for every client.</p>
+            <a href="#contact" class="header-cta">Work With Me</a>
         </div>
-    </section>
-    
+    </header>
+
+    <!-- ... Other sections ... -->
+
+    <!-- Contact Section -->
     <section id="contact">
         <div class="container">
-            <h3>Contact Me</h3>
-            <form id="contact-form">
+            <h2>Contact Me</h2>
+            <form action="#" method="POST">
                 <input type="text" placeholder="Your Name" required>
                 <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" required></textarea>
-                <button type="submit" class="btn">Send</button>
+                <textarea placeholder="Your Message" rows="6" required></textarea>
+                <button type="submit">Send Message</button>
             </form>
         </div>
     </section>
-    
+
+    <!-- Footer -->
     <footer>
-        <div class="container">
-            <p>&copy; 2024 Marlon - All Rights Reserved</p>
-        </div>
+        <p>&copy; 2024 Marlon - Web Designer. All Rights Reserved.</p>
     </footer>
 
-    <script src="scripts.js"></script>
 </body>
 </html>
-
