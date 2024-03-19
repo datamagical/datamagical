@@ -46,15 +46,21 @@
     .main-container {
       display: flex;
       justify-content: center;
-      align-items: flex-start;
+      align-items: stretch; /* changed from flex-start to stretch */
       max-width: 1200px;
       margin: 20px auto;
+      min-height: calc(100vh - 40px); /* adjust for margin and header height */
     }
 
     .about-me {
       flex: 0 1 30%;
       text-align: center;
       padding: 0 20px;
+      background-color: #f9f9f9; /* Just to distinguish the sidebar */
+      display: flex;
+      flex-direction: column;
+      justify-content: center; /* Center the content vertically */
+      height: 100%;
     }
 
     .about-me h1 {
@@ -132,16 +138,14 @@
 
   <div class="header-container">
     <header>
-      <div class="name">Евгений Грачёв</div>
+      <div class="name">Моё Имя Фамилия</div>
       <nav class="navigation">
         <a href="resume.pdf" target="_blank">Резюме</a>
         <a href="portfolio.html" target="_blank">Портфолио</a>
         <a href="skills.html" target="_blank">Навыки</a>
         <a href="https://github.com/username" target="_blank">GitHub</a>
       </nav>
-    </header>
-  </div>
-
+    </header
   <div class="main-container">
     <aside class="about-me">
       <h1>Евгений Грачёв</h1>
