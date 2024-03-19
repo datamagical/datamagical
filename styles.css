@@ -1,0 +1,74 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+nav {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0 20px;
+}
+
+nav a.logo {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+nav .menu {
+    align-items: center;
+    display: flex;
+}
+
+header {
+    background-color: #eee;
+    padding: 50px 0;
+    text-align: center;
+}
+
+header .header-content h1 {
+    margin: 0;
+}
+
+header .header-content h2 {
+    color: #555;
+}
+
+.contact-button {
+    text-decoration: none;
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+section {
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
