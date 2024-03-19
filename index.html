@@ -1,181 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            font-family: Open Sans, sans-serif;
-            font-style: normal;
-            background-image: url('https://github.com/datamagical/datamagical/blob/main/background/4321.jpg?raw=true');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            color: #000000;
-            display: flex;
-            flex-direction: column;
-        .container {
-            width: 100%;
-        }
-        .multiline {
-            white-space: pre-line;
-        }
-        .nav-container {
-            background-color: rgba(0, 0, 0, 0.7);
-            padding: 20px 0;
-            text-align: center;
-            width: 100%;
-            position: fixed;
-            top: 0;
-            z-index: 1000;
-            border-radius: 0 0 25px 25px;
-        }
-        .button {
-            background-color: transparent;
-            color: #FFFFFF;
-            padding: 10px 20px;
-            margin: 0 15px;
-            text-decoration: none;
-            font-size: 18px;
-            transition: background-color 0.3s, color 0.3s, border-radius 0.3s;
-            border: 2px solid white;
-            border-radius: 5px;
-        }
-        .button:hover {
-            background-color: transparent;
-            color: #C0C0C0;
-            border-radius: 25px;
-        }
-        .main-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center; 
-            padding-top: 60px; /* Увеличен отступ сверху */
-            width: 100%;
-        }
-        .welcome-text, .about-container {
-            text-align: center;
-            max-width: 900px; /* Увеличенная максимальная ширина */
-            margin: 5px; /* Увеличен отступ сверху и снизу, автоматическое центрирование */
-        }
-        .welcome-text h1, .about-text {
-            font-weight: 300;
-            font-weight: normal; /* Обычный, не жирный текст */
-            margin: 5px 0;
-        }
-        .welcome-text h1 {
-            font-size: 28px; /* Размер шрифта для приветствия */
-        }
-        .about-text {
-            text-align: justify;
-            text-justify: inter-word;
-            font-size: 17px; /* Чуть меньший размер шрифта для информации обо мне */
-        }
-        .projects-container {
-            width: 100%; /* Убедитесь, что контейнеры занимают всю доступную ширину */
-            max-width: 900px; /* Увеличенная максимальная ширина */
-            margin: 0 auto; /* Центрирование */
-        }
-        .project {
-            background-: rgba(255, 255, 255, 0.1);
-            filter: brightness(30%)
-            border-radius: 15px;
-            padding: 20px;
-            margin: 20px;
-            flex-basis: calc(50% - 40px);
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-            max-width: calc(300% - 250px);
-        }
-        .email {
-            background-: #000000;
-            color: #FFFFFF;
-            padding: 10px 20px;
-            border-radius: 15px;
-        }
-        .contact-container {
-            background-color: #000000; /* Чёрный фон */
-            border-radius: 15px; /* Скруглённые углы */
-            text-align: center; /* Текст выравнивается по центру */
-            padding: 20px; /* Внутренний отступ */
-            margin: 20px auto; /* Верхний и нижний отступы, автоматическое центрирование по горизонтали */
-            width: 40%; /* Ширина контейнера */
-            max-width: 1000px; /* Максимальная ширина, чтобы избежать слишком широкого расширения на больших экранах */
-        }
-        .project-link {
-            color: #000000;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        .project-link:hover {
-            color: #C0C0C0;
-        }
-        .second-half {
-            /* Стили не изменены */
-        }
-        .highlight-name {
-            font-weight: bold;
-            color: #000000;
-        }
-        .divider {
-            height: 2px; /* Высота линии */
-            background-color: #000000; /* Цвет линии */
-            width: 80%; /* Ширина линии. Можно настроить в соответствии с вашим дизайном */
-            margin-left: 0; /* Убираем отступ слева, чтобы выровнять линию по левому краю */
-            margin-top: 0px; /* Верхний отступ */
-            margin-bottom: 0px; /* Нижний отступ */
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Моё Портфолио</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .header-container {
+      background-color: #fff;
+      border-bottom: 1px solid #ccc;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    .header-container header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .name {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .navigation a {
+      text-decoration: none;
+      color: #333;
+      margin: 0 15px;
+      font-size: 16px;
+    }
+
+    .navigation a:hover {
+      text-decoration: underline;
+    }
+
+    .main-container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      max-width: 1200px;
+      margin: 20px auto;
+    }
+
+    .about-me {
+      flex: 0 1 30%;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .about-me h1 {
+      color: #000;
+      margin-bottom: 10px;
+      font-size: 26px;
+    }
+
+    .about-me p {
+      color: #666;
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
+    .projects {
+      flex: 0 1 70%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 20px;
+    }
+
+    .project {
+      width: calc(50% - 10px);
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .project h3 {
+      color: #333;
+      margin-bottom: 5px;
+    }
+
+    .project p {
+      color: #666;
+      margin-bottom: 15px;
+    }
+
+    .project a {
+      text-decoration: none;
+      color: #0066cc;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .project a:hover {
+      text-decoration: underline;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+    }
+
+    @media (max-width: 768px) {
+      .header-container header, .main-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .about-me, .projects {
+        flex-basis: 100%;
+      }
+
+      .project {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
 
-<div class="nav-container">
-    <a href="#resume" class="button">Resume</a>
-    <a href="https://github.com/datamagical/portfolio/blob/main/Certificates/" class="button" target="_blank">Сертификаты</a>
-    <a href="#portfolio" class="button">Portfolio</a>
-</div>
+  <div class="header-container">
+    <header>
+      <div class="name">Евгений Грачёв</div>
+      <nav class="navigation">
+        <a href="resume.pdf" target="_blank">Резюме</a>
+        <a href="portfolio.html" target="_blank">Портфолио</a>
+        <a href="skills.html" target="_blank">Навыки</a>
+        <a href="https://github.com/username" target="_blank">GitHub</a>
+      </nav>
+    </header>
+  </div>
 
-<div class="main-content">
-    <div class="welcome-text">
-        <h1>Приветствую, я <span class="highlight-name">Евгений Грачёв</span></h1>
-    </div>
-    <div class="about-container">
-        <p class="about-text"> Я, <span class="highlight-name">Аналитик данных</span>, здесь вы найдете мои проекты, выполненные в ходе обучения и на практике, каждый из которых снабжен кратким описанием, использованными инструментами и ссылками на репозитории проектов. Также доступна информация об образовании, сертификатах и ключевых навыках. Это мой способ продемонстрировать умения и потенциал будущим работодателям, коллегам в области анализа данных. </p>
-    </div>
-    <div class="projects-container">
-        <div class="project">
-                <h2><a href="https://github.com/datamagical/portfolio/tree/main/Cohort_RFM_analysis" class="project-link">RFM и когортный анализ</a></h2>
-                <div class="divider"></div>
-                <p>Данный проект включает в себя несколько важных для аналитика данных умений, таких как: предварительный анализ данных, проведение когортного анализа, анализ оттока клиентов, а также сегментационный анализ клиентов - RFM анализ.</p>
-        </div>
-        <div class="project">
-                <h2><a href="https://github.com/datamagical/portfolio/tree/main/project_ab_test" class="project-link">A/B тесты</a></h2>
-                <div class="divider"></div>
-                <p>В приложении, специализирующимся на демонстрации ленты новостей, проводился A/B тест, целью которого являлась проверка на тестовой группе пользователей новой системы рекомендации новостей, которая в теории должна была повысить метрику CTR. </p>
-        </div>
-        <div class="project">
-                <h2><a href="https://github.com/datamagical/portfolio/tree/main/Retention" class="project-link">Retention Rate</a></h2>
-                <div class="divider"></div>
-                <p>Анализ пользователей пришеших в приложение по средствам рекламного трафика и органического, а также поиск отличии и характера пользования приложением между двуся группами.</p>
-        </div>
-        <div class="project">
-                <h2><a href="https://github.com/datamagical/portfolio/tree/main/online_store_analysis" class="project-link">Анализ интернет магазина</a></h2>
-                <div class="divider"></div>
-                <p>Был увеличен порог цены на бесплатную доставку, необходимо проанализировать, как это отразилось на пользователях. </p>
-         </div>
-    </div>
-
-<div class="contact-container">
-        <p class="email">Email: imagical93@outlook.com</p>
-    </div>
-</div>
+  <div class="main-container">
+    <aside class="about-me">
+      <h1>Евгений Грачёв</h1>
+      <p>Аналитик данных</p>
+      <p>Здесь немного информации обо мне.</p>
+    </aside>
+  <section class="projects">
+      <!-- Проекты -->
+      <div class="project">
+        <h3>Проект 1</h3>
+        <p>Технологии: HTML, CSS, JS</p>
+        <p>Описание проекта.</p>
+        <a href="http://link-to-project.com" target="_blank">Смотреть</a>
+      </div>
+      <!-- Повторите блоки проектов -->
+    </section>
+  </div>
 
 </body>
 </html>
-
 
 
 
