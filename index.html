@@ -1,171 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Моё Портфолио</title>
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Arial', sans-serif;
-    }
-
-    .header-container {
-      background-color: #fff;
-      border-bottom: 1px solid #ccc;
-      padding: 10px 0;
-      text-align: center;
-    }
-
-    .header-container header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .name {
-      font-size: 24px;
-      font-weight: bold;
-    }
-
-    .navigation a {
-      text-decoration: none;
-      color: #333;
-      margin: 0 15px;
-      font-size: 16px;
-    }
-
-    .navigation a:hover {
-      text-decoration: underline;
-    }
-
-    .main-container {
-      display: flex;
-      justify-content: center;
-      align-items: stretch; /* changed from flex-start to stretch */
-      max-width: 1200px;
-      margin: 20px auto;
-      min-height: calc(100vh - 40px); /* adjust for margin and header height */
-    }
-
-    .about-me {
-      flex: 0 1 30%;
-      text-align: center;
-      padding: 0 20px;
-      background-color: #f9f9f9; /* Just to distinguish the sidebar */
-      display: flex;
-      flex-direction: column;
-      justify-content: center; /* Center the content vertically */
-      height: 100%;
-    }
-
-    .about-me h1 {
-      color: #000;
-      margin-bottom: 10px;
-      font-size: 26px;
-    }
-
-    .about-me p {
-      color: #666;
-      margin-bottom: 10px;
-      font-size: 18px;
-    }
-
-    .projects {
-      flex: 0 1 70%;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      gap: 20px;
-    }
-
-    .project {
-      width: calc(50% - 10px);
-      background-color: rgba(255, 255, 255, 0.9);
-      border-radius: 10px;
-      padding: 20px;
-      text-align: center;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s;
-    }
-
-    .project h3 {
-      color: #333;
-      margin-bottom: 5px;
-    }
-
-    .project p {
-      color: #666;
-      margin-bottom: 15px;
-    }
-
-    .project a {
-      text-decoration: none;
-      color: #0066cc;
-      display: inline-block;
-      margin-top: 10px;
-    }
-
-    .project a:hover {
-      text-decoration: underline;
-    }
-
-    .project:hover {
-      transform: translateY(-5px);
-    }
-
-    @media (max-width: 768px) {
-      .header-container header, .main-container {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .about-me, .projects {
-        flex-basis: 100%;
-      }
-
-      .project {
-        width: 100%;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marlon - Web Designer</title>
+    <link rel="stylesheet" href="https://github.com/datamagical/datamagical/blob/main/styles.css">
 </head>
 <body>
-
-  <div class="header-container">
     <header>
-      <div class="name">Моё Имя Фамилия</div>
-      <nav class="navigation">
-        <a href="resume.pdf" target="_blank">Резюме</a>
-        <a href="portfolio.html" target="_blank">Портфолио</a>
-        <a href="skills.html" target="_blank">Навыки</a>
-        <a href="https://github.com/username" target="_blank">GitHub</a>
-      </nav>
-    </header
-  <div class="main-container">
-    <aside class="about-me">
-      <h1>Евгений Грачёв</h1>
-      <p>Аналитик данных</p>
-      <p>Здесь немного информации обо мне.</p>
-    </aside>
-  <section class="projects">
-      <!-- Проекты -->
-      <div class="project">
-        <h3>Проект 1</h3>
-        <p>Технологии: HTML, CSS, JS</p>
-        <p>Описание проекта.</p>
-        <a href="http://link-to-project.com" target="_blank">Смотреть</a>
-      </div>
-      <!-- Повторите блоки проектов -->
+        <nav>
+            <div class="container">
+                <h1 class="logo">Marlon</h1>
+                <ul class="nav">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#works">Works</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="intro">
+            <div class="container">
+                <h2>Hi, I'm Marlon</h2>
+                <p>I am a Web Designer</p>
+                <a href="#contact" class="btn">Contact</a>
+            </div>
+        </div>
+    </header>
+    
+    <section id="about">
+        <div class="container">
+            <h3>About Me</h3>
+            <p>I am a passionate web designer with 5 years of experience. I love creating user-friendly and aesthetically pleasing websites. I specialize in front-end development and am skilled in HTML, CSS, JavaScript, and various web design tools.</p>
+        </div>
     </section>
-  </div>
+    
+    <section id="skills">
+        <div class="container">
+            <h3>Skills</h3>
+            <ul>
+                <li>HTML/CSS</li>
+                <li>JavaScript</li>
+                <li>Responsive Design</li>
+                <li>User Experience</li>
+                <li>Web Performance Optimization</li>
+                <li>SEO Best Practices</li>
+                <!-- More skills here -->
+            </ul>
+        </div>
+    </section>
+    
+    <section id="works">
+        <div class="container">
+            <h3>Works</h3>
+            <div id="work-container">
+                <!-- Portfolio items will be inserted here by JavaScript -->
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <div class="container">
+            <h3>Contact Me</h3>
+            <form id="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn">Send</button>
+            </form>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Marlon - All Rights Reserved</p>
+        </div>
+    </footer>
 
+    <script src="scripts.js"></script>
 </body>
 </html>
-
-
 
