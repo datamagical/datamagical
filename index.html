@@ -1,153 +1,133 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <title>Data Analyst portfolio</title>
+    <title>Marlon - Web Designer</title>
     <style>
-        body {
-                font-family: 'Roboto', sans-serif;
-                height: 100%;
-                margin: 0;
-                padding: 0;
-                background: #eeeeee; /* Слегка тёмнее для контраста с контентом */
-                color: #333;
-                line-height: 1.6;
-                background-image: url('https://github.com/datamagical/datamagical/blob/main/background/willian.jpg?raw=true');
-                background-size: cover; /* Покрывает весь элемент, сохраняя пропорции */
-                background-position: center; /* Центрирует изображение */
-                background-repeat: no-repeat; /* Предотвращает повторение изображения */
-            }
+        body, h1, p, a {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
 
-            
-            .container {
-                max-width: 900px; /* Немного больше для дополнительного пространства */
-                margin: 50px auto;
-                padding: 20px;
-                box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Более выраженная тень для "плавучего" эффекта */
-                background-color: rgba(255, 255, 255, 0.5); /* Белый фон с 50% прозрачностью */
-                border-radius: 12px;
-                padding: 20px;
-            }
-            
-            header {
-                width: 100%;
-                background-color: rgba(255, 255, 255, 0.5); /* Прозрачный фон */
-                padding: 20px 0;
-                position: fixed; /* Фиксированное положение */
-                top: 0;
-                left: 0;
-                z-index: 1000; /* Убедитесь, что шапка всегда сверху */
-            }
-            
-            nav {
-                display: flex;
-                justify-content: flex-end; /* Выравнивание ссылок по правому краю */
-                padding-right: 20px; /* Отступ справа */
-            }
-            
-            nav a {
-                text-decoration: none;
-                color: #007bff; /* Цвет ссылок */
-                margin-left: 20px; /* Отступ между ссылками */
-                font-weight: 500;
-            }
-            
-            nav a:hover {
-                color: #0056b3;
-            }
-            
-            .intro {
-                margin-bottom: 20px; /* Отступ от введения к карточкам проектов */
-                text-align: center; /* Центрируем содержимое */
-            }
-            
-            .projects-container {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Адаптивные колонки */
-                gap: 20px;
-            }
-            
-            .project-card {
-                border: 1px solid #e0e0e0; /* Деликатная рамка */
-                border-radius: 12px; /* Скругление углов */
-                padding: 15px;
-                transition: all 0.3s ease-in-out;
-                background-color: rgba(255, 255, 255, 0.5); /* Белый фон с 50% прозрачностью */
-            }
-            
-            .project-card:hover {
-                transform: translateY(-5px); /* "Поднимаем" карточку */
-                border-color: #007bff; /* Меняем цвет рамки */
-            }
-            
-            footer {
-                text-align: center;
-                padding: 20px 0;
-                font-size: 14px;
-                color: #666;
-                background-color: rgba(255, 255, 255, 0.5); /* Белый фон с 50% прозрачностью */
-                border-top: 1px solid #e0e0e0; /* Разделительная линия */
-                margin-top: 30px; /* Отступ от содержимого до подвала */
-            }
-            
-            @media (max-width: 768px) {
-                .container {
-                    margin: 30px auto;
-                    padding: 15px;
-                }
-            }
+        .navbar {
+            background-color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
 
+        .navbar ul {
+            list-style-type: none;
+            display: flex;
+        }
 
+        .navbar a {
+            text-decoration: none;
+            color: #333;
+            padding: 0.5rem 1rem;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #007bff;
+        }
+
+        .brand-title {
+            color: #333;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .main-header {
+            text-align: center;
+            padding: 4rem 1rem;
+        }
+
+        .main-header h1 {
+            font-size: 3rem;
+            color: #333;
+        }
+
+        .main-header p {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        .main-header .cta {
+            display: inline-block;
+            padding: 0.5rem 2rem;
+            background-color: #007bff;
+            color: white;
+            border-radius: 2rem;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .main-header .cta:hover {
+            background-color: #0056b3;
+        }
+
+        .social-links {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .social-links a {
+            margin: 0 0.5rem;
+            color: #333;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #007bff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #f8f9fa;
+            color: #333;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Евгений Грачёв</h1>
-            <nav>
-                <a href="#projects">Сертификаты</a>
-                <a href="https://github.com/yourusername" target="_blank">Резюме</a>
-            </nav>
+    <nav class="navbar">
+        <div class="brand-title">Marlon</div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Skills</a></li>
+            <li><a href="#">Works</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="main-header">
+        <h1>Привет,<br>Я Евгений<br>Data Analyst</h1>
+        <p>Creating modern and responsive web design.</p>
+        <a href="#" class="cta">Contact</a>
+        <div class="social-links">
+            <!-- Icons from FontAwesome can be used here -->
+            <a href="#">in</a>
+              <a href="#">Be</a>
+            <a href="#">GH</a>
         </div>
     </header>
 
-    <section class="intro">
-        <div class="container">
-            <h2>Привет, я аналитик данных</h2>
-            <p>Меня привлекает возможности анализа данных и его применение в разнообразных областях, а также быстрый прогресс в сфере информационных технологий. Это создаёт бесконечные возможности для обучения и открытия "нового". Я активно осваиваю современные подходы и инструменты в этой области, включая Python, SQL и различные BI-инструменты. Моя цель — применять эти знания для решения бизнес-задач. Мне бы хотелось присоединиться к команде единомышленников, где каждый член вносит уникальный вклад. В такой среде я надеюсь продолжать своё профессиональное развитие, обогащаясь лучшими практиками и новыми знаниями.</p>
-        </div>
-    </section>
-
-    <section class="projects" id="projects">
-        <div class="container">
-            <div class="projects-container">
-                <!-- Project 1 -->
-                <div class="project-card">
-                    <h3>RFM и когортный анализ</h3>
-                    <p>Данный проект демонстрирует мои навыки в предварительном анализе данных, когортном анализе, анализе оттока клиентов и RFM анализе.</p>
-                    <a href="https://github.com/datamagical/portfolio/tree/main/Cohort_RFM_analysis" target="_blank">Подробнее</a>
-                </div>
-                <!-- Project 2 -->
-                <div class="project-card">
-                    <h3>Автоматизация через Telegram-бота</h3>
-                    <p>Проект по автоматизации отправки уведомлений с использованием Telegram-бота и AirFlow, демонстрирующий мои способности в области автоматизации и программирования.</p>
-                    <a href="https://github.com/yourusername/project-telegram-bot" target="_blank">Подробнее</a>
-                </div>
-                <div class="project-card">
-                    <h3>RFM и когортный анализ</h3>
-                    <p>Данный проект демонстрирует мои навыки в предварительном анализе данных, когортном анализе, анализе оттока клиентов и RFM анализе.</p>
-                    <a href="https://github.com/datamagical/portfolio/tree/main/Cohort_RFM_analysis" target="_blank">Подробнее</a>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Здесь может быть основное содержимое страницы -->
 
     <footer>
-        <div class="container">
-            © Евгений Грачёв - Аналитик данных
-        </div>
+        <p>&copy; 2024 Marlon. All rights reserved.</p>
     </footer>
 </body>
 </html>
+
