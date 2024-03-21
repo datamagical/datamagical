@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Your Name</title>
+    <title>Портфолио - Евгений Грачёв</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background: #f7f7f7;
+            background: #fafafa;
             color: #333;
         }
 
@@ -33,12 +33,8 @@
 
         header h1 {
             margin: 0;
-            color: #333;
-            font-size: 24px;
-        }
-
-        nav {
-            text-align: right;
+            color: #007bff; /* Измененный цвет */
+            font-size: 26px; /* Увеличенный размер шрифта */
         }
 
         nav a {
@@ -46,29 +42,29 @@
             color: #333;
             margin-left: 20px;
             font-size: 16px;
+            transition: color 0.3s; /* Добавлен плавный переход */
         }
 
         nav a:hover {
             color: #007bff;
         }
 
-        .intro {
-            text-align: center;
-            padding: 60px 0;
-        }
-
         .intro h2 {
-            font-size: 28px;
+            font-size: 30px; /* Увеличенный размер шрифта */
             margin-bottom: 20px;
+            color: #333; /* Более темный цвет для лучшей читаемости */
         }
 
         .intro p {
             color: #666;
+            max-width: 600px; /* Ограничение ширины для лучшей читаемости */
+            margin: auto;
         }
 
         .projects {
             background: #fff;
             padding: 40px 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Добавлена тень для раздела */
         }
 
         .project {
@@ -77,6 +73,11 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            transition: background-color 0.3s; /* Добавлен эффект при наведении */
+        }
+
+        .project:hover {
+            background-color: #f9f9f9; /* Небольшой эффект при наведении */
         }
 
         .project:last-child {
@@ -86,21 +87,25 @@
         .project h3 {
             margin: 0;
             color: #333;
-            font-size: 20px;
+            font-size: 22px; /* Увеличенный размер для заголовков проектов */
         }
 
         .project p {
             margin: 0;
             color: #666;
+            font-size: 16px; /* Чуть больший размер текста для улучшения читаемости */
         }
 
         .project a {
             text-decoration: none;
             color: #007bff;
+            font-weight: bold; /* Сделаем ссылки более заметными */
+            transition: color 0.2s; /* Плавность перехода */
         }
 
         .project a:hover {
             text-decoration: underline;
+            color: #0056b3; /* Темнее при наведении */
         }
 
         footer {
@@ -108,19 +113,26 @@
             padding: 40px 0;
             font-size: 14px;
             color: #666;
+            background: #f7f7f7; /* Легкий фон для подвала */
+            box-shadow: 0 -2px 4px rgba(0,0,0,0.1); /* Тень сверху */
         }
 
         @media (max-width: 768px) {
-            header h1, nav a {
-                font-size: 18px;
+            header .container, .projects .container, footer .container {
+                flex-direction: column;
+                align-items: center; /* Центрирование для мобильных */
             }
 
-            .intro h2 {
-                font-size: 24px;
+            nav a {
+                margin: 10px 0; /* Отступы для навигации на мобильных */
             }
 
-            .project h3 {
-                font-size: 18px;
+            .project {
+                flex-direction: column; /* Вертикальное выравнивание проектов */
+            }
+
+            .project a {
+                margin-top: 10px; /* Дополнительный отступ сверху для ссылок */
             }
         }
     </style>
@@ -167,7 +179,7 @@
 
     <footer>
         <div class="container">
-            © Your Name - Web Developer
+            © Евгений Грачёв - Аналитик данных
         </div>
     </footer>
 </body>
