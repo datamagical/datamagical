@@ -116,11 +116,36 @@
             background: #f7f7f7; /* Легкий фон для подвала */
             box-shadow: 0 -2px 4px rgba(0,0,0,0.1); /* Тень сверху */
         }
+        .projects-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px; /* Расстояние между карточками */
+            justify-content: space-around;
+        }
 
+        .project-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 20px;
+            width: calc(50% - 10px); /* Автоматический расчет ширины с учетом gap */
+            transition: transform 0.3s ease-in-out;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px); /* Подъем карточки при наведении */
+        }
+        
         @media (max-width: 768px) {
-            header .container, .projects .container, footer .container {
+            .projects-container {
                 flex-direction: column;
-                align-items: center; /* Центрирование для мобильных */
+                align-items: center;
+            }
+
+            .project-card {
+                width: 100%; /* На мобильных устройствах карточка занимает всю ширину */
             }
 
             nav a {
@@ -150,30 +175,28 @@
 
     <section class="intro">
         <div class="container">
-            <h2>Привет, я Аналитик данных</h2>
-            <p>I specialize in creating beautiful and functional web solutions.</p>
+            <h2>Привет, я аналитик данных</h2>
+            <p>Я специализируюсь на создании красивых и функциональных решений в области веб-разработки.</p>
         </div>
     </section>
 
     <section class="projects" id="projects">
         <div class="container">
-            <!-- Project 1 -->
-            <div class="project">
-                <div>
+            <div class="projects-container">
+                <!-- Project 1 -->
+                <div class="project-card">
                     <h3>RFM и когортный анализ</h3>
-                    <p>Данный проект включает в себя несколько важных для аналитика данных умений, таких как: предварительный анализ данных, проведение когортного анализа, анализ оттока клиентов, а также сегментационный анализ клиентов - RFM анализ</p>
+                    <p>Данный проект демонстрирует мои навыки в предварительном анализе данных, когортном анализе, анализе оттока клиентов и RFM анализе.</p>
+                    <a href="https://github.com/datamagical/portfolio/tree/main/Cohort_RFM_analysis" target="_blank">Подробнее</a>
                 </div>
-                <a href="href="https://github.com/datamagical/portfolio/tree/main/Cohort_RFM_analysis" target="_blank">подробнее</a>
-            </div>
-            <!-- Project 2 -->
-            <div class="project">
-                <div>
-                    <h3>Project Title One</h3>
-                    <p>Short description of the project...</p>
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <h3>Автоматизация через Telegram-бота</h3>
+                    <p>Проект по автоматизации отправки уведомлений с использованием Telegram-бота и AirFlow, демонстрирующий мои способности в области автоматизации и программирования.</p>
+                    <a href="https://github.com/yourusername/project-telegram-bot" target="_blank">Подробнее</a>
                 </div>
-                <a href="https://github.com/yourusername/project-one" target="_blank">View on GitHub</a>
+                <!-- Дополнительные проекты можно добавлять аналогично -->
             </div>
-            <!-- Repeat for other projects -->
         </div>
     </section>
 
