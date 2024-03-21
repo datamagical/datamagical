@@ -8,6 +8,7 @@
     <style>
         body {
                 font-family: 'Roboto', sans-serif;
+                height: 100%;
                 margin: 0;
                 padding: 0;
                 background: #eeeeee; /* Слегка тёмнее для контраста с контентом */
@@ -31,32 +32,30 @@
             }
             
             header {
-                color: #333;
-                margin-bottom: 30px; /* Отступ для разделения шапки и контента */
-            }
-            
-            header h1 {
-                text-align: center;
-                font-weight: 700;
-                letter-spacing: -1px; /* Улучшаем читаемость заголовка */
-                color: #007bff; /* Яркий акцентный цвет для заголовка */
+                width: 100%;
+                background-color: rgba(255, 255, 255, 0.5); /* Прозрачный фон */
+                padding: 20px 0;
+                position: fixed; /* Фиксированное положение */
+                top: 0;
+                left: 0;
+                z-index: 1000; /* Убедитесь, что шапка всегда сверху */
             }
             
             nav {
-                text-align: center;
-                margin-bottom: 30px; /* Отступ от шапки */
+                display: flex;
+                justify-content: flex-end; /* Выравнивание ссылок по правому краю */
+                padding-right: 20px; /* Отступ справа */
             }
             
             nav a {
                 text-decoration: none;
-                color: #666;
-                margin: 0 15px;
+                color: #007bff; /* Цвет ссылок */
+                margin-left: 20px; /* Отступ между ссылками */
                 font-weight: 500;
-                transition: color 0.2s;
             }
             
             nav a:hover {
-                color: #007bff; /* Акцентный цвет при наведении */
+                color: #0056b3;
             }
             
             .intro {
