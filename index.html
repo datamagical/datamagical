@@ -9,85 +9,88 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background: #fafafa;
-            color: #333;
+            background: #eaeaea; /* Обновленный цвет фона */
+            color: #333; /* Базовый цвет текста */
         }
         
         .container {
             max-width: 800px;
-            margin: 0 auto;
+            margin: 20px auto;
             padding: 0 20px;
+            background: #fff; /* Фон для контента, чтобы выделить его на общем фоне страницы */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Добавляем тень вокруг контейнера */
+            border-radius: 8px; /* Скругляем углы контейнера */
         }
         
         header {
-            background: #ffffff;
+            background: #007bff; /* Яркий цвет фона для шапки */
+            color: #ffffff; /* Белый цвет текста в шапке */
             padding: 20px 0;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        
-        header .container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            border-radius: 8px 8px 0 0; /* Скругление только верхних углов */
         }
         
         header h1 {
             margin: 0;
-            color: #007bff;
             font-size: 26px;
         }
         
         nav a {
             text-decoration: none;
-            color: #333;
+            color: #ffffff; /* Цвет ссылок в шапке */
             margin-left: 20px;
             font-size: 16px;
             transition: color 0.3s;
         }
         
         nav a:hover {
-            color: #007bff;
+            color: #ffd700; /* Золотой цвет при наведении на ссылки */
         }
         
         .intro h2 {
-            font-size: 30px;
+            font-size: 28px;
             margin-bottom: 20px;
             color: #333;
         }
         
         .intro p {
             color: #666;
-            max-width: 600px;
-            margin: auto;
         }
         
         .projects-container {
             display: grid;
-            grid-template-columns: repeat(2, 1fr); /* Создаем две колонки с равной шириной */
-            gap: 20px; /* Расстояние между карточками и рядами */
-            margin-bottom: 20px; /* Отступ снизу для всего контейнера с проектами */
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 20px 0; /* Добавляем отступы для секции проектов */
         }
         
         .project-card {
-            background: #fff;
+            background: #ffffff;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             padding: 15px;
-            display: flex;
-            flex-direction: column;
-            transition: transform 0.3s ease-in-out;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         }
         
         .project-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0,0,0,0.2); /* Усиленная тень при наведении для эффекта "всплытия" */
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 14px;
+            color: #666;
+            background: #007bff; /* Цвет фона подвала, соответствующий шапке */
+            color: #ffffff; /* Цвет текста в подвале */
+            border-radius: 0 0 8px 8px; /* Скругление только нижних углов */
         }
         
         @media (max-width: 768px) {
             .projects-container {
-                grid-template-columns: 1fr; /* На мобильных устройствах создаем одну колонку */
+                grid-template-columns: 1fr;
             }
         }
-
     </style>
 </head>
 <body>
