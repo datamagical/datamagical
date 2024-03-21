@@ -10,76 +10,71 @@
                 font-family: 'Roboto', sans-serif;
                 margin: 0;
                 padding: 0;
-                background: #fafafa;
+                background: #eeeeee; /* Слегка тёмнее для контраста с контентом */
                 color: #333;
+                line-height: 1.6;
             }
             
             .container {
-                max-width: 800px;
-                margin: 40px auto;
+                max-width: 900px; /* Немного больше для дополнительного пространства */
+                margin: 50px auto;
                 padding: 20px;
-                background: #ffffff;
-                border: 1px solid #e0e0e0;
-                border-radius: 12px;
-                box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+                background: #fff;
+                border-radius: 16px; /* Больше скругление */
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Более выраженная тень для "плавучего" эффекта */
             }
             
             header {
-                background: #fff;
                 color: #333;
-                padding: 20px 0;
-                text-align: center;
-                border-bottom: 1px solid #e0e0e0;
+                margin-bottom: 30px; /* Отступ для разделения шапки и контента */
             }
             
             header h1 {
+                text-align: center;
                 font-weight: 700;
-                margin: 0;
-                font-size: 24px;
+                letter-spacing: -1px; /* Улучшаем читаемость заголовка */
+                color: #007bff; /* Яркий акцентный цвет для заголовка */
+            }
+            
+            nav {
+                text-align: center;
+                margin-bottom: 30px; /* Отступ от шапки */
             }
             
             nav a {
                 text-decoration: none;
-                color: #007bff;
+                color: #666;
                 margin: 0 15px;
-                font-weight: 400;
+                font-weight: 500;
                 transition: color 0.2s;
             }
             
             nav a:hover {
-                color: #0056b3;
+                color: #007bff; /* Акцентный цвет при наведении */
             }
             
-            .intro h2 {
-                font-size: 22px;
-                color: #333;
-                text-align: center;
-                margin: 20px 0;
-            }
-            
-            .intro p {
-                text-align: center;
-                color: #666;
+            .intro {
+                margin-bottom: 20px; /* Отступ от введения к карточкам проектов */
+                text-align: center; /* Центрируем содержимое */
             }
             
             .projects-container {
                 display: grid;
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Адаптивные колонки */
                 gap: 20px;
-                padding: 20px 0;
             }
             
             .project-card {
-                background: #f5f5f5;
-                border: 1px solid #e0e0e0;
-                border-radius: 8px;
+                background: #f9f9f9; /* Светлый фон для карточки */
+                border: 1px solid #e0e0e0; /* Деликатная рамка */
+                border-radius: 12px; /* Скругление углов */
                 padding: 15px;
-                transition: transform 0.2s ease-in-out;
+                transition: all 0.3s ease-in-out;
             }
             
             .project-card:hover {
-                transform: scale(1.03);
-                border-color: #007bff;
+                transform: translateY(-5px); /* "Поднимаем" карточку */
+                border-color: #007bff; /* Меняем цвет рамки */
             }
             
             footer {
@@ -87,15 +82,18 @@
                 padding: 20px 0;
                 font-size: 14px;
                 color: #666;
-                background: #fff;
-                border-top: 1px solid #e0e0e0;
+                background: #fff; /* Светлый фон для подвала */
+                border-top: 1px solid #e0e0e0; /* Разделительная линия */
+                margin-top: 30px; /* Отступ от содержимого до подвала */
             }
             
             @media (max-width: 768px) {
-                .projects-container {
-                    grid-template-columns: 1fr;
+                .container {
+                    margin: 30px auto;
+                    padding: 15px;
                 }
             }
+
 
     </style>
 </head>
