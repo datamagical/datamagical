@@ -62,9 +62,10 @@
         }
         
         .projects-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Создаем две колонки с равной шириной */
+            gap: 20px; /* Расстояние между карточками и рядами */
+            margin-bottom: 20px; /* Отступ снизу для всего контейнера с проектами */
         }
         
         .project-card {
@@ -72,11 +73,9 @@
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             padding: 15px;
-            margin-bottom: 20px; /* Отступ снизу для каждой карточки */
-            transition: transform 0.3s ease-in-out;
-            width: calc((100% - 20px) / 2); /* Устанавливаем ширину карточек, чтобы две вмещались в ряд с учетом gap */
             display: flex;
             flex-direction: column;
+            transition: transform 0.3s ease-in-out;
         }
         
         .project-card:hover {
@@ -84,8 +83,8 @@
         }
         
         @media (max-width: 768px) {
-            .project-card {
-                width: 100%; /* На мобильных устройствах карточка занимает всю ширину */
+            .projects-container {
+                grid-template-columns: 1fr; /* На мобильных устройствах создаем одну колонку */
             }
         }
 
