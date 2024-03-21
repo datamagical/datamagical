@@ -3,59 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Портфолио - Евгений Грачёв</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Data Analyst portfolio</title>
     <style>
         body {
-                font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+                font-family: 'Roboto', sans-serif;
                 margin: 0;
                 padding: 0;
-                background: #f5f5f5; /* Светлый фон для страницы */
-                color: #4a4a4a; /* Умеренно темный цвет текста для контраста */
+                background: #fafafa;
+                color: #333;
             }
             
             .container {
                 max-width: 800px;
-                margin: 30px auto;
+                margin: 40px auto;
                 padding: 20px;
-                background: #ffffff; /* Чистый белый фон для контента */
-                border: 1px solid #ddd; /* Тонкая граница вокруг контейнера */
-                border-radius: 10px; /* Скругленные углы */
+                background: #ffffff;
+                border: 1px solid #e0e0e0;
+                border-radius: 12px;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.05);
             }
             
             header {
-                background: #333; /* Темный фон для шапки */
-                color: #ffffff; /* Белый цвет текста */
+                background: #fff;
+                color: #333;
                 padding: 20px 0;
-                border-radius: 10px 10px 0 0; /* Скругляем только верхние углы */
-                text-align: center; /* Центрирование заголовка */
+                text-align: center;
+                border-bottom: 1px solid #e0e0e0;
             }
             
             header h1 {
+                font-weight: 700;
                 margin: 0;
                 font-size: 24px;
             }
             
             nav a {
                 text-decoration: none;
-                color: #ddd; /* Светло-серый цвет для ссылок */
+                color: #007bff;
                 margin: 0 15px;
-                font-size: 16px;
+                font-weight: 400;
                 transition: color 0.2s;
             }
             
             nav a:hover {
-                color: #ffd700; /* Цвет при наведении */
+                color: #0056b3;
             }
             
             .intro h2 {
                 font-size: 22px;
                 color: #333;
-                text-align: center; /* Центрирование заголовка вводного раздела */
+                text-align: center;
                 margin: 20px 0;
             }
             
             .intro p {
-                text-align: center; /* Центрирование абзаца */
+                text-align: center;
                 color: #666;
             }
             
@@ -67,31 +70,33 @@
             }
             
             .project-card {
-                background: #fafafa; /* Светлый фон для карточек проектов */
-                border: 1px solid #ddd; /* Тонкая граница */
-                border-radius: 8px; /* Скругленные углы */
+                background: #f5f5f5;
+                border: 1px solid #e0e0e0;
+                border-radius: 8px;
                 padding: 15px;
-                transition: box-shadow 0.3s ease-in-out;
+                transition: transform 0.2s ease-in-out;
             }
             
             .project-card:hover {
-                box-shadow: 0 8px 16px rgba(0,0,0,0.1); /* Тень при наведении для эффекта "поднятия" карточки */
+                transform: scale(1.03);
+                border-color: #007bff;
             }
             
             footer {
                 text-align: center;
                 padding: 20px 0;
                 font-size: 14px;
-                color: #ffffff;
-                background: #333; /* Повторение стиля шапки для подвала */
-                border-radius: 0 0 10px 10px; /* Скругляем только нижние углы */
+                color: #666;
+                background: #fff;
+                border-top: 1px solid #e0e0e0;
             }
             
             @media (max-width: 768px) {
                 .projects-container {
-                    grid-template-columns: 1fr; /* На мобильных одна колонка */
+                    grid-template-columns: 1fr;
                 }
             }
+
     </style>
 </head>
 <body>
