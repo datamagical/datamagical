@@ -64,49 +64,37 @@
         .projects-container {
             display: flex;
             flex-wrap: wrap;
-            gap: 20px;
-            justify-content: space-between;
+            justify-content: space-between; /* Это гарантирует, что элементы будут равномерно распределены с пространством между ними */
+            gap: 20px; /* Расстояние между карточками */
         }
         
         .project-card {
             background: #fff;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            padding: 20px;
-            flex: 0 1 calc(50% - 20px);
-            margin-bottom: 20px;
+            padding: 15px; /* Уменьшенный padding может помочь сделать карточки компактнее */
+            flex-basis: calc(50% - 20px); /* Адаптируем ширину карточек, учитывая gap */
+            margin-bottom: 20px; /* Отступ снизу для каждой карточки */
             transition: transform 0.3s ease-in-out;
             display: flex;
             flex-direction: column;
+            align-items: stretch; /* Это гарантирует, что ссылки в карточках будут выровнены по нижнему краю */
         }
         
         .project-card:hover {
             transform: translateY(-5px);
         }
         
-        footer {
-            text-align: center;
-            padding: 40px 0;
-            font-size: 14px;
-            color: #666;
-            background: #f7f7f7;
-            box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
-        }
-        
         @media (max-width: 768px) {
-            header .container, .projects-container, footer .container {
-                flex-direction: column;
-                align-items: center;
-            }
-        
-            nav a {
-                margin: 10px 0;
+            .projects-container {
+                justify-content: center; /* Центрируем карточки на мобильных устройствах */
             }
         
             .project-card {
-                flex: 0 1 100%;
+                flex-basis: 100%; /* На мобильных устройствах карточка занимает всю ширину */
             }
         }
+
     </style>
 </head>
 <body>
