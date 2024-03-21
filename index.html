@@ -64,21 +64,19 @@
         .projects-container {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between; /* Это гарантирует, что элементы будут равномерно распределены с пространством между ними */
-            gap: 20px; /* Расстояние между карточками */
+            gap: 20px;
         }
         
         .project-card {
             background: #fff;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            padding: 15px; /* Уменьшенный padding может помочь сделать карточки компактнее */
-            flex-basis: calc(50% - 20px); /* Адаптируем ширину карточек, учитывая gap */
+            padding: 15px;
             margin-bottom: 20px; /* Отступ снизу для каждой карточки */
             transition: transform 0.3s ease-in-out;
+            width: calc((100% - 20px) / 2); /* Устанавливаем ширину карточек, чтобы две вмещались в ряд с учетом gap */
             display: flex;
             flex-direction: column;
-            align-items: stretch; /* Это гарантирует, что ссылки в карточках будут выровнены по нижнему краю */
         }
         
         .project-card:hover {
@@ -86,12 +84,8 @@
         }
         
         @media (max-width: 768px) {
-            .projects-container {
-                justify-content: center; /* Центрируем карточки на мобильных устройствах */
-            }
-        
             .project-card {
-                flex-basis: 100%; /* На мобильных устройствах карточка занимает всю ширину */
+                width: 100%; /* На мобильных устройствах карточка занимает всю ширину */
             }
         }
 
