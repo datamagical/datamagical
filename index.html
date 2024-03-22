@@ -119,12 +119,17 @@
         }
         
         .project-card {
-            /* Убрать или изменить ширину */
-            max-width: 100%; /* Если оставить, карточки будут адаптироваться к ширине колонки */
-            margin: 0 auto;
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease-in-out;
+            margin: 0 auto; /* Убедитесь, что этот отступ не слишком велик */
             height: 150px;
             display: flex;
             flex-direction: column;
+            /* Возможно, потребуется уменьшить padding внутри карточек для экономии пространства */
         }
 
         
