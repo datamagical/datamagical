@@ -99,51 +99,42 @@
             width: 100%;
         }
         .projects {
-            justify-content: center; /* Центрируем содержимое по главной оси */
+            justify-content: center;
             text-align: center;
             padding: 2rem;
-            background-color: #f8f9fa; /* Легкий фон для выделения секции */
-        }
-        
-        .projects h2 {
-            margin-bottom: 1rem;
-            color: #333;
-        }
-        
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 0.5rem; /* Уменьшенные отступы между карточками */
-            padding: 1rem;
+            background-color: transparent; /* Цвет фона как у остальной страницы */
         }
         
         .project-card {
-            background-color: #ffffff;
-            border: 1px solid #e0e0e0;
+            background-color: rgba(0, 123, 255, 0.1); /* Лёгкий голубой фон с полупрозрачностью */
+            border: 1px solid rgba(0, 123, 255, 0.2); /* Слегка видимая граница */
             border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Легкая тень для добавления глубины */
             transition: transform 0.3s ease-in-out;
-            height: 150px;
+            height: auto; /* Высота автоматически адаптируется к содержимому */
             display: flex;
             flex-direction: column;
-            padding: 0.5rem; /* Уменьшенный внутренний отступ */
+            padding: 1rem; /* Увеличенный внутренний отступ */
+            margin: 0.5rem; /* Минимальные внешние отступы для чуть большей компактности */
         }
         
-        .project-image {
-            width: 100%;
-            height: auto;
-            display: block;
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
         
-        .project-card h3, .project-card p {
-            padding: 0.25rem 0.5rem; /* Минимальные отступы для текста */
+        .project-card h3, .project-card p, .project-link {
+            margin: 0.5rem 0; /* Унифицированные отступы для элементов внутри карточки */
         }
         
         .project-link {
-            padding: 0.25rem 0.5rem; /* Уменьшенный padding для ссылок */
+            background-color: #007bff; /* Голубой фон */
+            color: white;
             border-radius: 2rem;
-            margin: 0.25rem 0.5rem; /* Уменьшенные отступы вокруг ссылок */
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            transition: background-color 0.3s;
         }
         
         .project-link:hover {
@@ -181,26 +172,26 @@
         <div class="project-grid">
             <!-- Проект 1 -->
             <div class="project-card">
-                <img src="path-to-image-1.jpg" alt="Project 1 Image" class="project-image">
+<!--                 <img src="path-to-image-1.jpg" alt="Project 1 Image" class="project-image"> -->
                 <h3>Project Title 1</h3>
                 <p>Description of project 1.</p>
                 <a href="#" class="project-link">View Project</a>
             </div>
             <!-- Проект 2 -->
             <div class="project-card">
-                <img src="path-to-image-2.jpg" alt="Project 2 Image" class="project-image">
+<!--                 <img src="path-to-image-2.jpg" alt="Project 2 Image" class="project-image"> -->
                 <h3>Project Title 2</h3>
                 <p>Description of project 2.</p>
                 <a href="#" class="project-link">View Project</a>
             </div>
             <div class="project-card">
-                <img src="path-to-image-2.jpg" alt="Project 2 Image" class="project-image">
+<!--                 <img src="path-to-image-2.jpg" alt="Project 2 Image" class="project-image"> -->
                 <h3>Project Title 2</h3>
                 <p>Description of project 2.</p>
                 <a href="#" class="project-link">View Project</a>
             </div>
             <div class="project-card">
-                <img src="path-to-image-2.jpg" alt="Project 2 Image" class="project-image">
+<!--                 <img src="path-to-image-2.jpg" alt="Project 2 Image" class="project-image"> -->
                 <h3>Project Title 2</h3>
                 <p>Description of project 2.</p>
                 <a href="#" class="project-link">View Project</a>
