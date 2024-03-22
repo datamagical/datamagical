@@ -10,7 +10,7 @@
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            padding-bottom: 100px;
+            padding-bottom: 100px; /* Убедитесь, что этот отступ не мешает вашему дизайну */
         }
         
         .navbar {
@@ -46,18 +46,17 @@
         
         .main-header {
             text-align: center;
-            padding: 4rem 1rem;
+            padding: 2rem 1rem; /* Уменьшено с 4rem 1rem */
         }
         
         .main-header h1 {
-            font-size: 3rem;
+            font-size: 2.5rem; /* По желанию можно оставить прежним, если размер устраивает */
             color: #333;
         }
         
         .main-header p {
-            font-size: 1.2rem;
-            color: #666;
-            margin-bottom: 2rem;
+            font-size: 1rem; /* По желанию можно оставить прежним, если размер устраивает */
+            margin-bottom: 1rem; /* Уменьшено с 2rem */
         }
         
         .main-header .cta {
@@ -76,7 +75,8 @@
         
         .social-links {
             text-align: center;
-            margin-top: 2rem;
+            margin-top: 1rem; /* Уменьшено с 2rem */
+            margin-bottom: 1rem; /* Добавлено для контроля расстояния до футера */
         }
         
         .social-links a {
@@ -95,24 +95,19 @@
             padding: 1rem;
             background-color: #f8f9fa;
             color: #333;
-            /* Удалено: position: absolute; */
-            /* Удалено: bottom: 0; */
-            /* Удалено: width: 100%; */
-            margin-top: 2rem; /* Добавлен отступ сверху для отделения от содержимого */
+            margin-top: 1rem; /* Уменьшено или скорректировано в соответствии с требованиями */
         }
         
         .projects {
             justify-content: center;
             text-align: center;
-            padding: 2rem;
-            background-color: transparent;
+            padding: 1rem; /* Уменьшено с 2rem для уменьшения пространства */
         }
         
         .projects h2 {
             text-align: center;
-            margin: 0;
-            padding: 20px 0;
-            color: #333;
+            margin: 0 auto; /* Дополнительно может быть скорректировано */
+            padding: 1rem 0; /* Уменьшено с 20px для верхнего и нижнего отступа */
         }
         
         .project-grid {
@@ -120,44 +115,6 @@
             grid-template-columns: repeat(4, 1fr);
             gap: 0.5rem;
             padding: 1rem;
-        }
-        
-        .project-card {
-            background-color: #ffffff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            border-radius: 10px;
-            overflow: hidden;
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
-            height: auto;
-            display: flex;
-            flex-direction: column;
-            padding: 1rem;
-            margin: 0.5rem 0;
-        }
-        
-        .project-card h3, .project-card p {
-            font-style: normal;
-            padding: 0.5rem;
-            text-align: left;
-        }
-        
-        .project-link {
-            background-color: #007bff;
-            color: white;
-            border-radius: 20px;
-            padding: 0.5rem 1rem;
-            text-decoration: none;
-            transition: background-color 0.3s, transform 0.2s;
-        }
-        
-        .project-link:hover {
-            background-color: #0056b3;
-            transform: scale(1.05);
-        }
-        
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
         }
     </style>
 </head>
