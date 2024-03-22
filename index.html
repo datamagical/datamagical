@@ -11,7 +11,7 @@
             padding: 0;
             font-family: Arial, sans-serif;
         }
-
+        
         .navbar {
             background-color: #ffffff;
             display: flex;
@@ -20,45 +20,45 @@
             padding: 1rem 2rem;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-
+        
         .navbar ul {
             list-style-type: none;
             display: flex;
         }
-
+        
         .navbar a {
             text-decoration: none;
             color: #333;
             padding: 0.5rem 1rem;
             transition: color 0.3s;
         }
-
+        
         .navbar a:hover {
             color: #007bff;
         }
-
+        
         .brand-title {
             color: #333;
             font-size: 1.5rem;
             font-weight: bold;
         }
-
+        
         .main-header {
             text-align: center;
             padding: 4rem 1rem;
         }
-
+        
         .main-header h1 {
             font-size: 3rem;
             color: #333;
         }
-
+        
         .main-header p {
             font-size: 1.2rem;
             color: #666;
             margin-bottom: 2rem;
         }
-
+        
         .main-header .cta {
             display: inline-block;
             padding: 0.5rem 2rem;
@@ -68,27 +68,27 @@
             text-decoration: none;
             transition: background-color 0.3s;
         }
-
+        
         .main-header .cta:hover {
             background-color: #0056b3;
         }
-
+        
         .social-links {
             text-align: center;
             margin-top: 2rem;
         }
-
+        
         .social-links a {
             margin: 0 0.5rem;
             color: #333;
             font-size: 1.5rem;
             transition: color 0.3s;
         }
-
+        
         .social-links a:hover {
             color: #007bff;
         }
-
+        
         footer {
             text-align: center;
             padding: 1rem;
@@ -98,56 +98,19 @@
             bottom: 0;
             width: 100%;
         }
-/*         .projects {
-            justify-content: center;
-            text-align: center;
-            padding: 2rem;
-            background-color: transparent; /* Цвет фона как у остальной страницы */
-        }
         
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 0.5rem; /* Уменьшенные отступы между карточками */
-            padding: 1rem;
-        }
-        
-        .project-card {
-            background-color: #ffffff;
-            border: 1px solid #e0e0e0;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease-in-out;
-            height: 150px;
-            display: flex;
-            flex-direction: column;
-            padding: 0.5rem; /* Уменьшенный внутренний отступ */
-        }
-        
-        .project-image {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        
-        .project-card h3, .project-card p {
-            padding: 0.25rem 0.5rem; /* Минимальные отступы для текста */
-        }
-        
-        .project-link {
-            padding: 0.25rem 0.5rem; /* Уменьшенный padding для ссылок */
-            border-radius: 2rem;
-            margin: 0.25rem 0.5rem; /* Уменьшенные отступы вокруг ссылок */
-        }
-         .project-link:hover {
-            background-color: #0056b3;
-        } */
         .projects {
             justify-content: center;
             text-align: center;
             padding: 2rem;
             background-color: transparent;
+        }
+        
+        .projects h2 {
+            text-align: center;
+            margin: 0;
+            padding: 20px 0;
+            color: #333;
         }
         
         .project-grid {
@@ -159,31 +122,27 @@
         
         .project-card {
             background-color: #ffffff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Замена границ тенями для затемнённого эффекта */
-            border-radius: 10px; /* Скругление углов для более современного вида */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
             overflow: hidden;
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
-            height: auto; /* Автоматическая высота для адаптации к содержимому */
+            height: auto;
             display: flex;
             flex-direction: column;
-            padding: 1rem; /* Увеличенный внутренний отступ для лучшего визуального разделения */
-            margin: 0.5rem 0; /* Небольшой внешний отступ */
-        }
-        
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Увеличение тени для эффекта при наведении */
+            padding: 1rem;
+            margin: 0.5rem 0;
         }
         
         .project-card h3, .project-card p {
-            padding: 0.5rem; /* Увеличенные отступы для текста */
-            text-align: left; /* Выравнивание текста по левому краю */
+            font-style: normal;
+            padding: 0.5rem;
+            text-align: left;
         }
         
         .project-link {
             background-color: #007bff;
             color: white;
-            border-radius: 20px; /* Более круглая форма кнопки */
+            border-radius: 20px;
             padding: 0.5rem 1rem;
             text-decoration: none;
             transition: background-color 0.3s, transform 0.2s;
@@ -191,16 +150,12 @@
         
         .project-link:hover {
             background-color: #0056b3;
-            transform: scale(1.05); /* Небольшое увеличение размера кнопки при наведении */
+            transform: scale(1.05);
         }
-        .project-card h3, .project-card p {
-            font-style: normal; /* Делает текст обычным, не наклонным */
-            /* Остальные стили для текста */
-        }
-        .projects h2 {
-            text-align: center; /* Центрирование текста заголовка */
-            margin: 0; /* Убираем внешние отступы, если они есть */
-            padding: 20px 0; /* Пример добавления внутренних отступов для отступа от других элементов */
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
         }
     </style>
 </head>
