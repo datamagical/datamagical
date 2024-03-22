@@ -105,42 +105,41 @@
             background-color: transparent; /* Цвет фона как у остальной страницы */
         }
         
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0.5rem; /* Уменьшенные отступы между карточками */
+            padding: 1rem;
+        }
+        
         .project-card {
-            background-color: rgba(0, 123, 255, 0.1); /* Лёгкий голубой фон с полупрозрачностью */
-            border: 1px solid rgba(0, 123, 255, 0.2); /* Слегка видимая граница */
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
             border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Легкая тень для добавления глубины */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             transition: transform 0.3s ease-in-out;
-            height: auto; /* Высота автоматически адаптируется к содержимому */
+            height: 150px;
             display: flex;
             flex-direction: column;
-            padding: 1rem; /* Увеличенный внутренний отступ */
-            margin: 0.5rem; /* Минимальные внешние отступы для чуть большей компактности */
+            padding: 0.5rem; /* Уменьшенный внутренний отступ */
         }
         
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        .project-image {
+            width: 100%;
+            height: auto;
+            display: block;
         }
         
-        .project-card h3, .project-card p, .project-link {
-            margin: 0.5rem 0; /* Унифицированные отступы для элементов внутри карточки */
+        .project-card h3, .project-card p {
+            padding: 0.25rem 0.5rem; /* Минимальные отступы для текста */
         }
         
         .project-link {
-            background-color: #007bff; /* Голубой фон */
-            color: white;
+            padding: 0.25rem 0.5rem; /* Уменьшенный padding для ссылок */
             border-radius: 2rem;
-            padding: 0.5rem 1rem;
-            text-decoration: none;
-            transition: background-color 0.3s;
+            margin: 0.25rem 0.5rem; /* Уменьшенные отступы вокруг ссылок */
         }
-        
-        .project-link:hover {
-            background-color: #0056b3;
-        }
-
     </style>
 </head>
 <body>
