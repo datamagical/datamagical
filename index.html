@@ -41,21 +41,22 @@
             font-size: 1.5rem;
             font-weight: bold;
         }
-         .content-wrapper {
-            display: flex;
-            flex-direction: row; /* Элементы выстраиваются в строку */
-            justify-content: space-between; /* Распределяет контент с пространством между элементами */
-            align-items: flex-start; /* Выравнивание элементов по началу */
+        .content-wrapper {
+    	    display: flex;
+            width: 100%; /* Растягиваем на всю ширину */
+            align-items: flex-start; /* Выравнивание по верху */
         }
         .main-header {
-            text-align: center;
+    	    flex-basis: 75%; /* Начальная ширина для main-header */
+            margin-right: 7%; /* Отступ справа, чтобы обеспечить пространство между контейнерами */
+	    margin-left: 10%;
+	    margin-top: 4%;
             padding: 4rem 1rem;
-            font-style: normal;
-            width: 50%;
+            text-align: center;
         }
         
         .main-header h1 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             color: #333;
         }
         
@@ -106,12 +107,12 @@
         }
         
         .projects {
-            justify-content: center;
+	    flex-basis: 35%; /* Начальная ширина для projects, делает его немного шире с учетом margin-right у .main-header */
+    	    padding: 2rem;
             text-align: center;
             padding: 2rem;
             background-color: transparent;
             font-style: normal;
-            width: 50%;
         }
         
         .projects h2 {
