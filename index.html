@@ -113,9 +113,8 @@
         .project-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 1rem;
+            gap: 0.5rem; /* Уменьшенные отступы между карточками */
             padding: 1rem;
-            margin: 0 auto;
         }
         
         .project-card {
@@ -125,44 +124,26 @@
             overflow: hidden;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             transition: transform 0.3s ease-in-out;
-            margin: 0 auto; /* Убедитесь, что этот отступ не слишком велик */
             height: 150px;
             display: flex;
             flex-direction: column;
-            /* Возможно, потребуется уменьшить padding внутри карточек для экономии пространства */
-        }
-
-        
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            padding: 0.5rem; /* Уменьшенный внутренний отступ */
         }
         
         .project-image {
             width: 100%;
-            height: auto; /* Сохраняем пропорции изображения */
+            height: auto;
             display: block;
         }
         
-        .project-card h3 {
-            padding: 0.5rem;
-            color: #007bff; /* Акцентный цвет для названий проектов */
-        }
-        
-        .project-card p {
-            padding: 0 0.5rem 0.5rem;
-            color: #666;
+        .project-card h3, .project-card p {
+            padding: 0.25rem 0.5rem; /* Минимальные отступы для текста */
         }
         
         .project-link {
-            display: inline-block;
-            padding: 0.5rem 1rem;
-            background-color: #007bff;
-            color: white;
+            padding: 0.25rem 0.5rem; /* Уменьшенный padding для ссылок */
             border-radius: 2rem;
-            text-decoration: none;
-            margin-bottom: 0.5rem;
-            transition: background-color 0.3s;
+            margin: 0.25rem 0.5rem; /* Уменьшенные отступы вокруг ссылок */
         }
         
         .project-link:hover {
